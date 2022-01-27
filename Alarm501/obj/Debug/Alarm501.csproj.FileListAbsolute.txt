@@ -1,0 +1,12 @@
+C:\Users\yuto808263\source\repos\Alarm501\Alarm501\obj\Debug\Alarm501.csproj.AssemblyReference.cache
+C:\Users\yuto808263\source\repos\Alarm501\Alarm501\obj\Debug\Alarm501.EditButton.resources
+C:\Users\yuto808263\source\repos\Alarm501\Alarm501\obj\Debug\Alarm501.Form1.resources
+C:\Users\yuto808263\source\repos\Alarm501\Alarm501\obj\Debug\Alarm501.Properties.Resources.resources
+C:\Users\yuto808263\source\repos\Alarm501\Alarm501\obj\Debug\Alarm501.csproj.GenerateResource.cache
+C:\Users\yuto808263\source\repos\Alarm501\Alarm501\obj\Debug\Alarm501.csproj.CoreCompileInputs.cache
+C:\Users\yuto808263\source\repos\Alarm501\Alarm501\bin\Debug\Alarm501.exe.config
+C:\Users\yuto808263\source\repos\Alarm501\Alarm501\bin\Debug\Alarm501.exe
+C:\Users\yuto808263\source\repos\Alarm501\Alarm501\bin\Debug\Alarm501.pdb
+C:\Users\yuto808263\source\repos\Alarm501\Alarm501\obj\Debug\Alarm501.exe
+C:\Users\yuto808263\source\repos\Alarm501\Alarm501\obj\Debug\Alarm501.pdb
+C:\Users\yuto808263\source\repos\Alarm501\Alarm501\obj\Debug\Alarm501.AddButton.resources
