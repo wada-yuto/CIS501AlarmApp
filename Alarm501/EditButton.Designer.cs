@@ -90,6 +90,7 @@ namespace Alarm501
             this.uxSetButtonEdit.TabIndex = 4;
             this.uxSetButtonEdit.Text = "Set";
             this.uxSetButtonEdit.UseVisualStyleBackColor = true;
+            this.uxSetButtonEdit.Click += new System.EventHandler(this.uxSetButtonEdit_Click);
             // 
             // EditButton
             // 

@@ -13,7 +13,15 @@ namespace Alarm501
     /// </summary>
     public class Alarm : INotifyPropertyChanged
     {
+        /// <summary>
+        /// 
+        /// </summary>
         public event PropertyChangedEventHandler PropertyChanged;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public DateTime SnoozeTime;
 
 
         /// <summary>
@@ -24,7 +32,7 @@ namespace Alarm501
         /// <summary>
         /// Represent minuets in alarm
         /// </summary>
-        private int _minuets { get; set; }
+        private int _minutes { get; set; }
 
         /// <summary>
         /// Represent seconds in alarm
@@ -41,6 +49,11 @@ namespace Alarm501
         /// </summary>
         private string _amPM { get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool Ringing { get; set; } = false;
+
 
 
 
@@ -52,23 +65,23 @@ namespace Alarm501
                 if(_hour != value)
                 {
                     _hour = value;
-                    OnPropertyChanged(nameof(Minuets));
+                    OnPropertyChanged(nameof(Minutes));
                     OnPropertyChanged(nameof(Seconds));
 
                 }
             }
         }
 
-        public int Minuets
+        public int Minutes
         {
-            get => _minuets;
+            get => _minutes;
             set
             {
-                if(_minuets != value)
+                if(_minutes != value)
                 {
-                    _minuets = value;
+                    _minutes = value;
                     OnPropertyChanged(nameof(Hour));
-                    OnPropertyChanged(nameof(Minuets));
+                    OnPropertyChanged(nameof(Minutes));
                     OnPropertyChanged(nameof(Seconds));
                 }
             }
@@ -83,7 +96,7 @@ namespace Alarm501
                 {
                     _seconds = value;
                     OnPropertyChanged(nameof(Hour));
-                    OnPropertyChanged(nameof(Minuets));
+                    OnPropertyChanged(nameof(Minutes));
                     OnPropertyChanged(nameof(Seconds));
                 }
             }
@@ -120,7 +133,7 @@ namespace Alarm501
             string runningString;
             if (Running) runningString = "Running";
             else runningString = "Not Running";
-            return String.Format("{0:D}:{1:00} {2} {3}", Hour, Minuets, AmPm.ToLower(), runningString);
+            return String.Format("{0:D}:{1:00} {2} {3}", Hour, Minutes, AmPm.ToLower(), runningString);
 
         }
 
@@ -135,10 +148,11 @@ namespace Alarm501
         public Alarm(int hourIn, int minuetsIn, int secondsIn, bool runningIn, string amPm)
         {
             Hour = hourIn;
-            Minuets = minuetsIn;
+            Minutes = minuetsIn;
             Seconds = secondsIn;
             Running = runningIn;
             AmPm = amPm;
+            SnoozeTime = GetTime();
 
         }
 
@@ -149,6 +163,21 @@ namespace Alarm501
         protected void OnPropertyChanged(string propertyName)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+
+        /// <summary>
+        /// Convert time into DateTime object
+        /// </summary>
+        /// <returns>Returns current time</returns>
+        public DateTime GetTime()
+        {
+            StringBuilder builder = new StringBuilder();
+            builder.Append(Hour.ToString());
+            builder.Append(":");
+            builder.Append(Minutes.ToString());
+            builder.Append(" ");
+            builder.Append(AmPm);
+            return DateTime.Parse(builder.ToString());
         }
 
 

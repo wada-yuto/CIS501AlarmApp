@@ -34,8 +34,9 @@ namespace Alarm501
             this.uxSnoozeButton = new System.Windows.Forms.Button();
             this.uxStopButton = new System.Windows.Forms.Button();
             this.uxAlarmList = new System.Windows.Forms.ListBox();
-            this.alarmBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.uxEditButton = new System.Windows.Forms.Button();
+            this.uxAlarmOffTextBox = new System.Windows.Forms.TextBox();
+            this.alarmBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.alarmBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -52,6 +53,7 @@ namespace Alarm501
             // 
             // uxSnoozeButton
             // 
+            this.uxSnoozeButton.Enabled = false;
             this.uxSnoozeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.uxSnoozeButton.Location = new System.Drawing.Point(25, 329);
             this.uxSnoozeButton.Name = "uxSnoozeButton";
@@ -59,9 +61,11 @@ namespace Alarm501
             this.uxSnoozeButton.TabIndex = 2;
             this.uxSnoozeButton.Text = "Snooze";
             this.uxSnoozeButton.UseVisualStyleBackColor = true;
+            this.uxSnoozeButton.Click += new System.EventHandler(this.uxSnoozeButton_Click);
             // 
             // uxStopButton
             // 
+            this.uxStopButton.Enabled = false;
             this.uxStopButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.uxStopButton.Location = new System.Drawing.Point(142, 330);
             this.uxStopButton.Name = "uxStopButton";
@@ -69,6 +73,7 @@ namespace Alarm501
             this.uxStopButton.TabIndex = 3;
             this.uxStopButton.Text = "Stop";
             this.uxStopButton.UseVisualStyleBackColor = true;
+            this.uxStopButton.Click += new System.EventHandler(this.uxStopButton_Click);
             // 
             // uxAlarmList
             // 
@@ -81,12 +86,9 @@ namespace Alarm501
             this.uxAlarmList.Size = new System.Drawing.Size(204, 184);
             this.uxAlarmList.TabIndex = 4;
             // 
-            // alarmBindingSource
-            // 
-            this.alarmBindingSource.DataSource = typeof(Alarm501.Alarm);
-            // 
             // uxEditButton
             // 
+            this.uxEditButton.Enabled = false;
             this.uxEditButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.uxEditButton.Location = new System.Drawing.Point(25, 42);
             this.uxEditButton.Name = "uxEditButton";
@@ -96,11 +98,25 @@ namespace Alarm501
             this.uxEditButton.UseVisualStyleBackColor = true;
             this.uxEditButton.Click += new System.EventHandler(this.uxEditButton_Click);
             // 
+            // uxAlarmOffTextBox
+            // 
+            this.uxAlarmOffTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.uxAlarmOffTextBox.Location = new System.Drawing.Point(25, 301);
+            this.uxAlarmOffTextBox.Name = "uxAlarmOffTextBox";
+            this.uxAlarmOffTextBox.ReadOnly = true;
+            this.uxAlarmOffTextBox.Size = new System.Drawing.Size(204, 13);
+            this.uxAlarmOffTextBox.TabIndex = 6;
+            // 
+            // alarmBindingSource
+            // 
+            this.alarmBindingSource.DataSource = typeof(Alarm501.Alarm);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(261, 418);
+            this.Controls.Add(this.uxAlarmOffTextBox);
             this.Controls.Add(this.uxEditButton);
             this.Controls.Add(this.uxAlarmList);
             this.Controls.Add(this.uxStopButton);
@@ -110,6 +126,7 @@ namespace Alarm501
             this.Text = "Alarm501";
             ((System.ComponentModel.ISupportInitialize)(this.alarmBindingSource)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -120,6 +137,7 @@ namespace Alarm501
         private System.Windows.Forms.ListBox uxAlarmList;
         private System.Windows.Forms.Button uxEditButton;
         private System.Windows.Forms.BindingSource alarmBindingSource;
+        private System.Windows.Forms.TextBox uxAlarmOffTextBox;
     }
 }
 
