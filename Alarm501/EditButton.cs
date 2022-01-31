@@ -84,11 +84,15 @@ namespace Alarm501
 
         }
 
-
-        public void LineChanger(string newText, int line_to_edit)
+        /// <summary>
+        /// Function to change the given lines text in the alarm text file
+        /// </summary>
+        /// <param name="newText">string newText is the new text that will be written into the text file</param>
+        /// <param name="lineNumber">int index is line number that will be changed in the text file</param>
+        public void LineChanger(string newText, int lineNumber)
         {
             string[] arrLine = File.ReadAllLines("..\\..\\Alarm.txt");
-            arrLine[line_to_edit] = newText;
+            arrLine[lineNumber] = newText;
             File.WriteAllLines("..\\..\\Alarm.txt", arrLine);
         }
 
