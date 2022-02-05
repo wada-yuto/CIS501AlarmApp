@@ -14,10 +14,21 @@ namespace Alarm501
     public partial class EditButton : Form
     {
 
+        /// <summary>
+        /// alarm that will be changed
+        /// </summary>
         Alarm editAlarm;
 
+        /// <summary>
+        /// index in alarm list
+        /// </summary>
         int index;
 
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        /// <param name="alarm">Alarm that will be edited</param>
+        /// <param name="index">index number of the alarm in the list</param>
         public EditButton(Alarm alarm, int index)
         {
             InitializeComponent();
@@ -37,11 +48,21 @@ namespace Alarm501
 
         }
 
+        /// <summary>
+        /// uxCancelButton_Click Event Handler
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void uxCancelButton_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
+        /// <summary>
+        /// uxSetButtonEdit_Click Event Handler
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void uxSetButtonEdit_Click(object sender, EventArgs e)
         {
             string timeForAlarm = uxTimePickerEdit.Value.ToLongTimeString();
@@ -88,7 +109,7 @@ namespace Alarm501
         /// Function to change the given lines text in the alarm text file
         /// </summary>
         /// <param name="newText">string newText is the new text that will be written into the text file</param>
-        /// <param name="lineNumber">int index is line number that will be changed in the text file</param>
+        /// <param name="lineNumber">int lineNumber is line number that will be changed in the text file</param>
         public void LineChanger(string newText, int lineNumber)
         {
             string[] arrLine = File.ReadAllLines("..\\..\\Alarm.txt");

@@ -22,7 +22,9 @@ namespace Alarm501
         Timers.Timer newTimer = null;
 
 
-
+        /// <summary>
+        /// Constructor for Form1
+        /// </summary>
         public Form1()
         {
             InitializeComponent();
@@ -40,11 +42,15 @@ namespace Alarm501
 
             if (uxAlarmList.SelectedItem != null) uxEditButton.Enabled = true;
 
-        } 
+        }
 
 
 
-
+        /// <summary>
+        /// xAddButton_Click Event handler
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void uxAddButton_Click(object sender, EventArgs e)
         {
             
@@ -58,6 +64,11 @@ namespace Alarm501
 
         }
 
+        /// <summary>
+        /// uxEditButton_Click Event Handler
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void uxEditButton_Click(object sender, EventArgs e)
         {
             EditButton ed = new EditButton(alarmTime[uxAlarmList.SelectedIndex], uxAlarmList.SelectedIndex);
@@ -69,6 +80,10 @@ namespace Alarm501
         }
 
 
+        /// <summary>
+        /// Function that will count line before new line is added
+        /// </summary>
+        /// <returns>Return the number of line</returns>
         private int CountLine()
         {
             using(StreamReader reader = new StreamReader("..\\..\\Alarm.txt"))
@@ -79,6 +94,10 @@ namespace Alarm501
             }
         }
 
+        /// <summary>
+        /// Function that will start reading the alarm text file at given line
+        /// </summary>
+        /// <param name="lineNumber">int lineNumber is the line that it will start reading at</param>
         private void StartReadingAtLine(int lineNumber)
         {
             using(StreamReader reader = new StreamReader("..\\..\\Alarm.txt"))
@@ -102,6 +121,11 @@ namespace Alarm501
             }
         }
 
+        /// <summary>
+        /// Function that checks to see if alarm is going to go off at current time
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void AlarmCheck(object sender, ElapsedEventArgs e)
         {
             DateTime currentTime = DateTime.Now;
@@ -124,6 +148,9 @@ namespace Alarm501
             }
         }
 
+        /// <summary>
+        /// Function that changes textbox when alarm goes off
+        /// </summary>
         private void AlarmOff()
         {
             uxAlarmOffTextBox.Text = "Alarm is going off!";
@@ -132,7 +159,7 @@ namespace Alarm501
         }
 
         /// <summary>
-        /// 
+        /// uxSnoozeButton_Click Event Handler
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -153,7 +180,7 @@ namespace Alarm501
         }
 
         /// <summary>
-        /// 
+        /// uxStopButton_Click Event handler
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -176,6 +203,9 @@ namespace Alarm501
 
         }
 
+        /// <summary>
+        /// Function that reads in the Alarm text file
+        /// </summary>
         private void ReadFile()
         {
             BindingList<Alarm> temp = new BindingList<Alarm>();

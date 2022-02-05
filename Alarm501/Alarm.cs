@@ -14,12 +14,12 @@ namespace Alarm501
     public class Alarm : INotifyPropertyChanged
     {
         /// <summary>
-        /// 
+        /// PropertyChanged
         /// </summary>
         public event PropertyChangedEventHandler PropertyChanged;
 
         /// <summary>
-        /// 
+        /// DateTime representing time after snooze
         /// </summary>
         public DateTime SnoozeTime;
 
@@ -50,13 +50,15 @@ namespace Alarm501
         private string _amPM { get; set; }
 
         /// <summary>
-        /// 
+        /// Represents if alarm is ringing or not
         /// </summary>
         public bool Ringing { get; set; } = false;
 
 
 
-
+        /// <summary>
+        /// Hour of the alarm
+        /// </summary>
         public int Hour
         {
             get => _hour;
@@ -72,6 +74,9 @@ namespace Alarm501
             }
         }
 
+        /// <summary>
+        /// Minuets of the alarm
+        /// </summary>
         public int Minutes
         {
             get => _minutes;
@@ -87,6 +92,9 @@ namespace Alarm501
             }
         }
 
+        /// <summary>
+        /// Seconds of the alarm
+        /// </summary>
         public int Seconds
         {
             get => _seconds;
@@ -102,6 +110,9 @@ namespace Alarm501
             }
         }
 
+        /// <summary>
+        /// Boolean representing if the alarm is running or not
+        /// </summary>
         public bool Running
         {
             get => _running;
@@ -115,6 +126,9 @@ namespace Alarm501
             }
         }
 
+        /// <summary>
+        /// Stirng representing if alarm is in AM or PM
+        /// </summary>
         public string AmPm
         {
             get => _amPM;
@@ -127,7 +141,10 @@ namespace Alarm501
             }
         }
 
-
+        /// <summary>
+        /// Overriden ToString that returns alarm string in a certain format
+        /// </summary>
+        /// <returns>Returns alarm string</returns>
         public override string ToString()
         {
             string runningString;

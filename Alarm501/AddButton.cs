@@ -13,11 +13,19 @@ namespace Alarm501
 {
     public partial class AddButton : Form
     {
+        /// <summary>
+        /// Constructor
+        /// </summary>
         public AddButton()
         {
             InitializeComponent();
         }
 
+        /// <summary>
+        /// uxSetButtonAdd_Click Event handler
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void uxSetButtonAdd_Click(object sender, EventArgs e)
         {
 
