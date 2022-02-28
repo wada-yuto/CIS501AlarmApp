@@ -34,6 +34,7 @@ namespace Alarm501
             string timeForAlarmWithoutAmPm = timeForAlarm.Split(' ')[0];
             string runningOrNot;
             string amPm;
+            string sound = uxSoundCombo.Text;
 
             if (timeForAlarm.Contains("AM")) amPm = "AM";
             else amPm = "PM";
@@ -46,7 +47,7 @@ namespace Alarm501
             if (running) runningOrNot = "Running";
             else runningOrNot = "No";
 
-            string finalString = timeForAlarmWithoutAmPm + ":" + runningOrNot + ":" + amPm;
+            string finalString = timeForAlarmWithoutAmPm + ":" + runningOrNot + ":" + amPm + ":" + sound;
 
 
             if (File.Exists("..\\..\\Alarm.txt"))
@@ -60,6 +61,11 @@ namespace Alarm501
             this.Close();
 
 
+        }
+
+        private void uxCancelButtonAdd_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -33,6 +33,7 @@ namespace Alarm501
             this.uxOnCheckBoxAdd = new System.Windows.Forms.CheckBox();
             this.uxCancelButtonAdd = new System.Windows.Forms.Button();
             this.uxSetButtonAdd = new System.Windows.Forms.Button();
+            this.uxSoundCombo = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // uxTimePickerAdd
@@ -57,17 +58,18 @@ namespace Alarm501
             // uxCancelButtonAdd
             // 
             this.uxCancelButtonAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uxCancelButtonAdd.Location = new System.Drawing.Point(12, 79);
+            this.uxCancelButtonAdd.Location = new System.Drawing.Point(12, 109);
             this.uxCancelButtonAdd.Name = "uxCancelButtonAdd";
             this.uxCancelButtonAdd.Size = new System.Drawing.Size(73, 40);
             this.uxCancelButtonAdd.TabIndex = 2;
             this.uxCancelButtonAdd.Text = "Cancel";
             this.uxCancelButtonAdd.UseVisualStyleBackColor = true;
+            this.uxCancelButtonAdd.Click += new System.EventHandler(this.uxCancelButtonAdd_Click);
             // 
             // uxSetButtonAdd
             // 
             this.uxSetButtonAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uxSetButtonAdd.Location = new System.Drawing.Point(154, 80);
+            this.uxSetButtonAdd.Location = new System.Drawing.Point(154, 109);
             this.uxSetButtonAdd.Name = "uxSetButtonAdd";
             this.uxSetButtonAdd.Size = new System.Drawing.Size(73, 40);
             this.uxSetButtonAdd.TabIndex = 3;
@@ -75,11 +77,26 @@ namespace Alarm501
             this.uxSetButtonAdd.UseVisualStyleBackColor = true;
             this.uxSetButtonAdd.Click += new System.EventHandler(this.uxSetButtonAdd_Click);
             // 
+            // uxSoundCombo
+            // 
+            this.uxSoundCombo.FormattingEnabled = true;
+            this.uxSoundCombo.Items.AddRange(new object[] {
+            "Radar",
+            "Beacon",
+            "Chimes",
+            "Circuit",
+            "Reflection"});
+            this.uxSoundCombo.Location = new System.Drawing.Point(12, 78);
+            this.uxSoundCombo.Name = "uxSoundCombo";
+            this.uxSoundCombo.Size = new System.Drawing.Size(121, 21);
+            this.uxSoundCombo.TabIndex = 4;
+            // 
             // AddButton
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(239, 146);
+            this.ClientSize = new System.Drawing.Size(239, 161);
+            this.Controls.Add(this.uxSoundCombo);
             this.Controls.Add(this.uxSetButtonAdd);
             this.Controls.Add(this.uxCancelButtonAdd);
             this.Controls.Add(this.uxOnCheckBoxAdd);
@@ -97,5 +114,6 @@ namespace Alarm501
         private System.Windows.Forms.CheckBox uxOnCheckBoxAdd;
         private System.Windows.Forms.Button uxCancelButtonAdd;
         private System.Windows.Forms.Button uxSetButtonAdd;
+        private System.Windows.Forms.ComboBox uxSoundCombo;
     }
 }

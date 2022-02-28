@@ -69,6 +69,7 @@ namespace Alarm501
             string timeForAlarmWithoutAmPm = timeForAlarm.Split(' ')[0];
             string runningOrNot;
             string amPm;
+            string sound = uxAlarmSoundCombo.Text;
 
             if (timeForAlarm.Contains("AM"))
             {
@@ -97,7 +98,7 @@ namespace Alarm501
             else runningOrNot = "No";
 
             //String to write to the text file
-            string textString = timeForAlarmWithoutAmPm + ":" + runningOrNot + ":" + amPm;
+            string textString = timeForAlarmWithoutAmPm + ":" + runningOrNot + ":" + amPm + ":" + sound;
             LineChanger(textString, index);
             this.Close();
 
@@ -117,6 +118,29 @@ namespace Alarm501
             File.WriteAllLines("..\\..\\Alarm.txt", arrLine);
         }
 
+        private void uxAlarmSoundCombo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(uxAlarmSoundCombo.SelectedItem.ToString() == "Radar")
+            {
+                editAlarm.sound = Sound.Radar;
+            }
+            if (uxAlarmSoundCombo.SelectedItem.ToString() == "Beacon")
+            {
+                editAlarm.sound = Sound.Beacon;
+            }
+            if (uxAlarmSoundCombo.SelectedItem.ToString() == "Chimes")
+            {
+                editAlarm.sound = Sound.Chimes;
+            }
+            if (uxAlarmSoundCombo.SelectedItem.ToString() == "Circuit")
+            {
+                editAlarm.sound = Sound.Circuit;
+            }
+            if (uxAlarmSoundCombo.SelectedItem.ToString() == "Reflection")
+            {
+                editAlarm.sound = Sound.Reflection;
+            }
 
+        }
     }
 }

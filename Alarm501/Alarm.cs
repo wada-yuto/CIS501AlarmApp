@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel;
 using System.IO;
+using Alarm501;
 
 namespace Alarm501
 {
@@ -53,6 +54,11 @@ namespace Alarm501
         /// Represents if alarm is ringing or not
         /// </summary>
         public bool Ringing { get; set; } = false;
+
+        /// <summary>
+        /// Enum representing soun dof alarm
+        /// </summary>
+        public Sound sound = Sound.Radar;
 
 
 
@@ -162,13 +168,14 @@ namespace Alarm501
         /// <param name="minuetsIn">minuets of alarm clock being set</param>
         /// <param name="secondsIn">seconds of alarm clock being set</param>
         /// <param name="runningIn">boolean value of whether alarm clock is runnign or not</param>
-        public Alarm(int hourIn, int minuetsIn, int secondsIn, bool runningIn, string amPm)
+        public Alarm(int hourIn, int minuetsIn, int secondsIn, bool runningIn, string amPm, Sound sound)
         {
             Hour = hourIn;
             Minutes = minuetsIn;
             Seconds = secondsIn;
             Running = runningIn;
             AmPm = amPm;
+            this.sound = sound;
             SnoozeTime = GetTime();
 
         }

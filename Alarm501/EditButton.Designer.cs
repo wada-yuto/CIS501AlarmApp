@@ -29,11 +29,17 @@ namespace Alarm501
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.uxTimePickerEdit = new System.Windows.Forms.DateTimePicker();
             this.uxOnCheckBoxEdit = new System.Windows.Forms.CheckBox();
             this.uxCancelButtonEdit = new System.Windows.Forms.Button();
             this.uxSetButtonEdit = new System.Windows.Forms.Button();
+            this.uxAlarmSoundCombo = new System.Windows.Forms.ComboBox();
+            this.alarmBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.alarmBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.alarmBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.alarmBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -73,7 +79,7 @@ namespace Alarm501
             // uxCancelButtonEdit
             // 
             this.uxCancelButtonEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uxCancelButtonEdit.Location = new System.Drawing.Point(12, 79);
+            this.uxCancelButtonEdit.Location = new System.Drawing.Point(12, 109);
             this.uxCancelButtonEdit.Name = "uxCancelButtonEdit";
             this.uxCancelButtonEdit.Size = new System.Drawing.Size(73, 40);
             this.uxCancelButtonEdit.TabIndex = 3;
@@ -84,7 +90,7 @@ namespace Alarm501
             // uxSetButtonEdit
             // 
             this.uxSetButtonEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uxSetButtonEdit.Location = new System.Drawing.Point(154, 80);
+            this.uxSetButtonEdit.Location = new System.Drawing.Point(154, 109);
             this.uxSetButtonEdit.Name = "uxSetButtonEdit";
             this.uxSetButtonEdit.Size = new System.Drawing.Size(73, 40);
             this.uxSetButtonEdit.TabIndex = 4;
@@ -92,11 +98,35 @@ namespace Alarm501
             this.uxSetButtonEdit.UseVisualStyleBackColor = true;
             this.uxSetButtonEdit.Click += new System.EventHandler(this.uxSetButtonEdit_Click);
             // 
+            // uxAlarmSoundCombo
+            // 
+            this.uxAlarmSoundCombo.FormattingEnabled = true;
+            this.uxAlarmSoundCombo.Items.AddRange(new object[] {
+            "Radar",
+            "Beacon",
+            "Chimes",
+            "Circuit",
+            "Reflection"});
+            this.uxAlarmSoundCombo.Location = new System.Drawing.Point(12, 75);
+            this.uxAlarmSoundCombo.Name = "uxAlarmSoundCombo";
+            this.uxAlarmSoundCombo.Size = new System.Drawing.Size(132, 21);
+            this.uxAlarmSoundCombo.TabIndex = 5;
+            this.uxAlarmSoundCombo.SelectedIndexChanged += new System.EventHandler(this.uxAlarmSoundCombo_SelectedIndexChanged);
+            // 
+            // alarmBindingSource1
+            // 
+            this.alarmBindingSource1.DataSource = typeof(Alarm501.Alarm);
+            // 
+            // alarmBindingSource
+            // 
+            this.alarmBindingSource.DataSource = typeof(Alarm501.Alarm);
+            // 
             // EditButton
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(239, 146);
+            this.ClientSize = new System.Drawing.Size(239, 161);
+            this.Controls.Add(this.uxAlarmSoundCombo);
             this.Controls.Add(this.uxSetButtonEdit);
             this.Controls.Add(this.uxCancelButtonEdit);
             this.Controls.Add(this.uxOnCheckBoxEdit);
@@ -106,6 +136,8 @@ namespace Alarm501
             this.RightToLeftLayout = true;
             this.Text = "Edit Alarm";
             this.Load += new System.EventHandler(this.EditButton_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.alarmBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.alarmBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -118,5 +150,8 @@ namespace Alarm501
         private System.Windows.Forms.Button uxCancelButtonEdit;
         private System.Windows.Forms.Button uxSetButtonEdit;
         public System.Windows.Forms.CheckBox uxOnCheckBoxEdit;
+        private System.Windows.Forms.ComboBox uxAlarmSoundCombo;
+        private System.Windows.Forms.BindingSource alarmBindingSource;
+        private System.Windows.Forms.BindingSource alarmBindingSource1;
     }
 }

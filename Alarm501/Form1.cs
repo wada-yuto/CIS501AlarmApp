@@ -17,7 +17,7 @@ namespace Alarm501
 
     {
         //List to store alarm time
-        BindingList<Alarm> alarmTime = new BindingList<Alarm>();
+        public BindingList<Alarm> alarmTime = new BindingList<Alarm>();
 
         Timers.Timer newTimer = null;
 
@@ -112,8 +112,14 @@ namespace Alarm501
                     bool running;
                     if (timeFromText.Contains("Running")) running = true;
                     else running = false;
+                    Sound sound;
+                    if (timeFromText[5] == "Radar") sound = Sound.Radar;
+                    else if (timeFromText[5] == "Beacon") sound = Sound.Beacon;
+                    else if (timeFromText[5] == "Chimes") sound = Sound.Chimes;
+                    else if (timeFromText[5] == "Circuit") sound = Sound.Circuit;
+                    else sound = Sound.Reflection;
                     alarmTime.Add(new Alarm(Convert.ToInt32(timeFromText[0]),
-                        Convert.ToInt32(timeFromText[1]), Convert.ToInt32(timeFromText[2]), running, timeFromText[4]));
+                        Convert.ToInt32(timeFromText[1]), Convert.ToInt32(timeFromText[2]), running, timeFromText[4], sound));
 
                 }
 
@@ -136,10 +142,11 @@ namespace Alarm501
                 {
                     AlarmOff();
                     alarm.Ringing = true;
+                    uxSoundLabel.Text = alarm.sound.ToString();
                 }
                 if (alarm.Ringing)
                 {
-                    if(currentTime.Hour == alarm.SnoozeTime.Hour && currentTime.Minute == alarm.SnoozeTime.Minute && currentTime.Second == alarm.SnoozeTime.Second)
+                    if(currentTime.Hour == alarm.SnoozeTime.Hour && currentTime.Minute == alarm.SnoozeTime.Minute)
                     {
                         AlarmOff();
                     }
@@ -156,6 +163,7 @@ namespace Alarm501
             uxAlarmOffTextBox.Text = "Alarm is going off!";
             uxSnoozeButton.Enabled = true;
             uxStopButton.Enabled = true;
+            uxSnoozeLongerButton.Enabled = true;
         }
 
         /// <summary>
@@ -176,6 +184,7 @@ namespace Alarm501
             uxSnoozeButton.Enabled = false;
             uxStopButton.Enabled = false;
             uxAlarmOffTextBox.Text = " ";
+            uxSoundLabel.Text = " ";
 
         }
 
@@ -194,6 +203,7 @@ namespace Alarm501
                     alarm.Ringing = false;
                 }
             }
+            uxSoundLabel.Text = " ";
             uxSnoozeButton.Enabled = false;
             uxStopButton.Enabled = false;
             uxAlarmOffTextBox.Text = " ";
@@ -218,8 +228,15 @@ namespace Alarm501
                     bool running;
                     if (timeFromText.Contains("Running")) running = true;
                     else running = false;
+
+                    Sound sound;
+                    if (timeFromText[5] == "Radar") sound = Sound.Radar;
+                    else if (timeFromText[5] == "Beacon") sound = Sound.Beacon;
+                    else if (timeFromText[5] == "Chimes") sound = Sound.Chimes;
+                    else if (timeFromText[5] == "Circuit") sound = Sound.Circuit;
+                    else sound = Sound.Reflection;
                     temp.Add(new Alarm(Convert.ToInt32(timeFromText[0]),
-                        Convert.ToInt32(timeFromText[1]), Convert.ToInt32(timeFromText[2]), running, timeFromText[4]));
+                        Convert.ToInt32(timeFromText[1]), Convert.ToInt32(timeFromText[2]), running, timeFromText[4],sound));
 
 
                 }
@@ -228,7 +245,25 @@ namespace Alarm501
             }
         }
 
-        
+        private void uxSoundLabel_Click(object sender, EventArgs e)
+        {
 
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void uxSnoozeLongerButton_Click(object sender, EventArgs e)
+        {
+            SnoozeButton snooze = new SnoozeButton();
+            snooze.ShowDialog();
+            uxAlarmList.DataSource = alarmTime;
+            uxSnoozeButton.Enabled = false;
+            uxStopButton.Enabled = false;
+            uxAlarmOffTextBox.Text = " ";
+            uxSoundLabel.Text = " ";
+        }
     }
 }
