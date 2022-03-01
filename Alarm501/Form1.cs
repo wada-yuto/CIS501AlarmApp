@@ -140,15 +140,14 @@ namespace Alarm501
                 DateTime alarmTime = alarm.GetTime();
                 if(currentTime.Hour == alarmTime.Hour && currentTime.Minute == alarmTime.Minute && currentTime.Second == alarmTime.Second)
                 {
-                    AlarmOff();
+                    AlarmOff(alarm.sound);
                     alarm.Ringing = true;
-                    uxSoundLabel.Text = alarm.sound.ToString();
                 }
                 if (alarm.Ringing)
                 {
                     if(currentTime.Hour == alarm.SnoozeTime.Hour && currentTime.Minute == alarm.SnoozeTime.Minute)
                     {
-                        AlarmOff();
+                        AlarmOff(alarm.sound);
                     }
                 }
                 
@@ -158,12 +157,13 @@ namespace Alarm501
         /// <summary>
         /// Function that changes textbox when alarm goes off
         /// </summary>
-        private void AlarmOff()
+        private void AlarmOff(Sound sound)
         {
             uxAlarmOffTextBox.Text = "Alarm is going off!";
+            uxSoundLabel.Text = sound.ToString();
             uxSnoozeButton.Enabled = true;
             uxStopButton.Enabled = true;
-            uxSnoozeLongerButton.Enabled = true;
+            uxSnoozeTimeUpDown.Enabled = true;
         }
 
         /// <summary>
@@ -178,13 +178,14 @@ namespace Alarm501
                 if (alarm.Ringing)
                 {
                     DateTime now = DateTime.Now;
-                    alarm.SnoozeTime = now.AddSeconds(3);
+                    alarm.SnoozeTime = now.AddMinutes(Convert.ToInt32(uxSnoozeTimeUpDown.Value));
                 }
             }
             uxSnoozeButton.Enabled = false;
             uxStopButton.Enabled = false;
             uxAlarmOffTextBox.Text = " ";
-            uxSoundLabel.Text = " ";
+            uxSoundLabel.ResetText();
+            uxSnoozeTimeUpDown.ResetText();
 
         }
 
@@ -255,15 +256,6 @@ namespace Alarm501
 
         }
 
-        private void uxSnoozeLongerButton_Click(object sender, EventArgs e)
-        {
-            SnoozeButton snooze = new SnoozeButton();
-            snooze.ShowDialog();
-            uxAlarmList.DataSource = alarmTime;
-            uxSnoozeButton.Enabled = false;
-            uxStopButton.Enabled = false;
-            uxAlarmOffTextBox.Text = " ";
-            uxSoundLabel.Text = " ";
-        }
+
     }
 }

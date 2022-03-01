@@ -37,8 +37,9 @@ namespace Alarm501
             this.uxEditButton = new System.Windows.Forms.Button();
             this.uxAlarmOffTextBox = new System.Windows.Forms.TextBox();
             this.uxSoundLabel = new System.Windows.Forms.Label();
+            this.uxSnoozeTimeUpDown = new System.Windows.Forms.NumericUpDown();
             this.alarmBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.uxSnoozeLongerButton = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.uxSnoozeTimeUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.alarmBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,7 +58,7 @@ namespace Alarm501
             // 
             this.uxSnoozeButton.Enabled = false;
             this.uxSnoozeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uxSnoozeButton.Location = new System.Drawing.Point(25, 370);
+            this.uxSnoozeButton.Location = new System.Drawing.Point(25, 402);
             this.uxSnoozeButton.Name = "uxSnoozeButton";
             this.uxSnoozeButton.Size = new System.Drawing.Size(87, 47);
             this.uxSnoozeButton.TabIndex = 2;
@@ -69,7 +70,7 @@ namespace Alarm501
             // 
             this.uxStopButton.Enabled = false;
             this.uxStopButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uxStopButton.Location = new System.Drawing.Point(142, 370);
+            this.uxStopButton.Location = new System.Drawing.Point(142, 402);
             this.uxStopButton.Name = "uxStopButton";
             this.uxStopButton.Size = new System.Drawing.Size(87, 46);
             this.uxStopButton.TabIndex = 3;
@@ -111,34 +112,40 @@ namespace Alarm501
             // 
             // uxSoundLabel
             // 
-            this.uxSoundLabel.Location = new System.Drawing.Point(22, 333);
+            this.uxSoundLabel.Location = new System.Drawing.Point(25, 332);
             this.uxSoundLabel.Name = "uxSoundLabel";
             this.uxSoundLabel.Size = new System.Drawing.Size(204, 13);
             this.uxSoundLabel.TabIndex = 7;
             this.uxSoundLabel.Click += new System.EventHandler(this.uxSoundLabel_Click);
             // 
+            // uxSnoozeTimeUpDown
+            // 
+            this.uxSnoozeTimeUpDown.Enabled = false;
+            this.uxSnoozeTimeUpDown.Increment = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.uxSnoozeTimeUpDown.Location = new System.Drawing.Point(25, 367);
+            this.uxSnoozeTimeUpDown.Maximum = new decimal(new int[] {
+            30,
+            0,
+            0,
+            0});
+            this.uxSnoozeTimeUpDown.Name = "uxSnoozeTimeUpDown";
+            this.uxSnoozeTimeUpDown.Size = new System.Drawing.Size(204, 20);
+            this.uxSnoozeTimeUpDown.TabIndex = 8;
+            // 
             // alarmBindingSource
             // 
             this.alarmBindingSource.DataSource = typeof(Alarm501.Alarm);
-            // 
-            // uxSnoozeLongerButton
-            // 
-            this.uxSnoozeLongerButton.Enabled = false;
-            this.uxSnoozeLongerButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uxSnoozeLongerButton.Location = new System.Drawing.Point(25, 449);
-            this.uxSnoozeLongerButton.Name = "uxSnoozeLongerButton";
-            this.uxSnoozeLongerButton.Size = new System.Drawing.Size(87, 47);
-            this.uxSnoozeLongerButton.TabIndex = 8;
-            this.uxSnoozeLongerButton.Text = "Snooze";
-            this.uxSnoozeLongerButton.UseVisualStyleBackColor = true;
-            this.uxSnoozeLongerButton.Click += new System.EventHandler(this.uxSnoozeLongerButton_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(261, 509);
-            this.Controls.Add(this.uxSnoozeLongerButton);
+            this.ClientSize = new System.Drawing.Size(261, 461);
+            this.Controls.Add(this.uxSnoozeTimeUpDown);
             this.Controls.Add(this.uxSoundLabel);
             this.Controls.Add(this.uxAlarmOffTextBox);
             this.Controls.Add(this.uxEditButton);
@@ -149,6 +156,7 @@ namespace Alarm501
             this.Name = "Form1";
             this.Text = "Alarm501";
             this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.uxSnoozeTimeUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.alarmBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -164,7 +172,7 @@ namespace Alarm501
         private System.Windows.Forms.BindingSource alarmBindingSource;
         private System.Windows.Forms.TextBox uxAlarmOffTextBox;
         private System.Windows.Forms.Label uxSoundLabel;
-        private System.Windows.Forms.Button uxSnoozeLongerButton;
+        private System.Windows.Forms.NumericUpDown uxSnoozeTimeUpDown;
     }
 }
 

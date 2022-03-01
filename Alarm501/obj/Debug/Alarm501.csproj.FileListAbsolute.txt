@@ -34,4 +34,3 @@ C:\Users\yuto808263\Desktop\Alarm501\Alarm501\obj\Debug\Alarm501.csproj.Generate
 C:\Users\yuto808263\Desktop\Alarm501\Alarm501\obj\Debug\Alarm501.csproj.CoreCompileInputs.cache
 C:\Users\yuto808263\Desktop\Alarm501\Alarm501\obj\Debug\Alarm501.exe
 C:\Users\yuto808263\Desktop\Alarm501\Alarm501\obj\Debug\Alarm501.pdb
-C:\Users\yuto808263\Desktop\Alarm501\Alarm501\obj\Debug\Alarm501.SnoozeButton.resources
