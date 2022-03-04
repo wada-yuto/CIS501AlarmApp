@@ -29,7 +29,7 @@ namespace Alarm501
         private void uxSetButtonAdd_Click(object sender, EventArgs e)
         {
 
-            
+            //Make this logic in contol and pass in the values and text as a parameter
             string timeForAlarm = uxTimePickerAdd.Value.ToLongTimeString();
             string timeForAlarmWithoutAmPm = timeForAlarm.Split(' ')[0];
             string runningOrNot;

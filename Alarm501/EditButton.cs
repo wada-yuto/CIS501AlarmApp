@@ -65,6 +65,7 @@ namespace Alarm501
         /// <param name="e"></param>
         private void uxSetButtonEdit_Click(object sender, EventArgs e)
         {
+            //Make this logic in contol and pass in the values and text as a parameter
             string timeForAlarm = uxTimePickerEdit.Value.ToLongTimeString();
             string timeForAlarmWithoutAmPm = timeForAlarm.Split(' ')[0];
             string runningOrNot;
@@ -106,17 +107,7 @@ namespace Alarm501
 
         }
 
-        /// <summary>
-        /// Function to change the given lines text in the alarm text file
-        /// </summary>
-        /// <param name="newText">string newText is the new text that will be written into the text file</param>
-        /// <param name="lineNumber">int lineNumber is line number that will be changed in the text file</param>
-        public void LineChanger(string newText, int lineNumber)
-        {
-            string[] arrLine = File.ReadAllLines("..\\..\\Alarm.txt");
-            arrLine[lineNumber] = newText;
-            File.WriteAllLines("..\\..\\Alarm.txt", arrLine);
-        }
+      
 
         private void uxAlarmSoundCombo_SelectedIndexChanged(object sender, EventArgs e)
         {
