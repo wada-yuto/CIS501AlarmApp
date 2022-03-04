@@ -111,9 +111,9 @@ namespace Alarm501
         #endregion
 
         private System.Windows.Forms.DateTimePicker uxTimePickerAdd;
-        private System.Windows.Forms.CheckBox uxOnCheckBoxAdd;
         private System.Windows.Forms.Button uxCancelButtonAdd;
         private System.Windows.Forms.Button uxSetButtonAdd;
         private System.Windows.Forms.ComboBox uxSoundCombo;
+        public System.Windows.Forms.CheckBox uxOnCheckBoxAdd;
     }
 }

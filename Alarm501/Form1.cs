@@ -13,8 +13,15 @@ using System.Timers;
 
 namespace Alarm501
 {
+    public delegate void ReadFileDel();
+    public delegate int CountLineDel();
+    public delegate void StartReadingAtLineDel(int line);
+    public delegate void AlarmCheckDel();
+    public delegate void SnoozeButtonClickLogicDel();
+    public delegate void StopButtonClickDel();
     public partial class Form1 : Form
     {
+        Controller controller;
 
         Timers.Timer newTimer = null;
 
@@ -25,20 +32,33 @@ namespace Alarm501
         public Form1()
         {
             InitializeComponent();
-            if(alarmTime.Count != 0) uxEditButton.Enabled = true;
+            controller = new Controller(this);
+            if (controller.alarmTime.Count != 0) uxEditButton.Enabled = true;
 
-            ReadFile();
+            ReadFileDel ReadFileDelegate= new ReadFileDel(controller.ReadFile);
+            ReadFileDelegate(); //Call ReadFile from controller
            
-            uxAlarmList.DataSource = alarmTime;
+            uxAlarmList.DataSource = controller.alarmTime;
 
             newTimer = new System.Timers.Timer(1000);
-            newTimer.Elapsed += AlarmCheck;
+            newTimer.Elapsed += AlarmCheck; 
             newTimer.SynchronizingObject = this;
             newTimer.AutoReset = true;
             newTimer.Start();
 
             if (uxAlarmList.SelectedItem != null) uxEditButton.Enabled = true;
 
+        }
+
+        /// <summary>
+        /// Function that checks to see if alarm is going to go off at current time
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void AlarmCheck(object sender, ElapsedEventArgs e)
+        {
+            AlarmCheckDel AlarmCheckDelegate = new AlarmCheckDel(controller.AlarmCheckLogic);
+            AlarmCheckDelegate();
         }
 
 
@@ -53,9 +73,10 @@ namespace Alarm501
             
             AddButton ad = new AddButton();
             ad.ShowDialog();
-            int after = CountLine();
-            StartReadingAtLine(CountLine());
-            uxAlarmList.DataSource = alarmTime;
+            StartReadingAtLineDel StartReadingAtLineDelegate = new StartReadingAtLineDel(controller.StartReadingAtLine);
+            CountLineDel CountLineDelegate = new CountLineDel(controller.CountLine);
+            StartReadingAtLineDelegate(CountLineDelegate());
+            uxAlarmList.DataSource = controller.alarmTime;
             if (uxAlarmList.SelectedItem != null) uxEditButton.Enabled = true;
 
 
@@ -68,10 +89,11 @@ namespace Alarm501
         /// <param name="e"></param>
         private void uxEditButton_Click(object sender, EventArgs e)
         {
-            EditButton ed = new EditButton(alarmTime[uxAlarmList.SelectedIndex], uxAlarmList.SelectedIndex);
+            EditButton ed = new EditButton(controller.alarmTime[uxAlarmList.SelectedIndex], uxAlarmList.SelectedIndex);
             ed.ShowDialog();
-            ReadFile();
-            uxAlarmList.DataSource = alarmTime;
+            ReadFileDel ReadFileDelegate = new ReadFileDel(controller.ReadFile);
+            ReadFileDelegate(); //Call ReadFile from controller
+            uxAlarmList.DataSource = controller.alarmTime;
             if (uxAlarmList.SelectedItem != null) uxEditButton.Enabled = true;
 
         }
@@ -83,13 +105,22 @@ namespace Alarm501
         /// <summary>
         /// Function that changes textbox when alarm goes off
         /// </summary>
-        private void AlarmOff(Sound sound)
+        public void AlarmOff(Sound sound)
         {
             uxAlarmOffTextBox.Text = "Alarm is going off!";
             uxSoundLabel.Text = sound.ToString();
             uxSnoozeButton.Enabled = true;
             uxStopButton.Enabled = true;
             uxSnoozeTimeUpDown.Enabled = true;
+        }
+
+        /// <summary>
+        /// Gets the time for snooze and return the time
+        /// </summary>
+        /// <returns>Returns the time for snooze</returns>
+        public int GetSnoozeTime()
+        {
+            return Convert.ToInt32(uxSnoozeTimeUpDown.Value);
         }
 
         /// <summary>
@@ -100,14 +131,9 @@ namespace Alarm501
         private void uxSnoozeButton_Click(object sender, EventArgs e)
         {
             //Create method in controller for this part of the logic
-            foreach(Alarm alarm in alarmTime)
-            {
-                if (alarm.Ringing)
-                {
-                    DateTime now = DateTime.Now;
-                    alarm.SnoozeTime = now.AddMinutes(Convert.ToInt32(uxSnoozeTimeUpDown.Value));
-                }
-            }
+            SnoozeButtonClickLogicDel SnoozeButtonClickLogicDelegate = new SnoozeButtonClickLogicDel(controller.SnoozeButtonClickLogic);
+            SnoozeButtonClickLogicDelegate();
+
             uxSnoozeButton.Enabled = false;
             uxStopButton.Enabled = false;
             uxAlarmOffTextBox.Text = " ";
@@ -124,20 +150,15 @@ namespace Alarm501
         private void uxStopButton_Click(object sender, EventArgs e)
         {
             //Create method for this part of the logic
-            foreach (Alarm alarm in alarmTime)
-            {
-                if (alarm.Ringing)
-                {
-                    alarm.Running = false;
-                    alarm.Ringing = false;
-                }
-            }
+            StopButtonClickDel StopButtonClickDelegate = new StopButtonClickDel(controller.StopButtonClickLogic);
+            StopButtonClickDelegate();
+
             uxSoundLabel.Text = " ";
             uxSnoozeButton.Enabled = false;
             uxStopButton.Enabled = false;
             uxAlarmOffTextBox.Text = " ";
             uxAlarmList.DataSource = null;
-            uxAlarmList.DataSource = alarmTime;
+            uxAlarmList.DataSource = controller.alarmTime;
 
 
         }
