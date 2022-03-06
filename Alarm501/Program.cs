@@ -16,7 +16,15 @@ namespace Alarm501
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Form1 form1 = new Form1();
+
+            //make controller
+            //make form1
+            //pass controller items to form1
+            Controller controller = new Controller(form1.AlarmOff, form1.GetSnoozeTime);
+            form1.SetUp(controller.ReadFile, controller.CountLine, controller.StartReadingAtLine, controller.AlarmCheckLogic, controller.SnoozeButtonClickLogic, 
+                controller.StopButtonClickLogic, controller.GetAlarmTime, controller.AddButtonClickLogic, controller.EditButtonClickLogic);
+            Application.Run(form1);
         }
     }
 }

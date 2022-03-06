@@ -19,12 +19,24 @@ namespace Alarm501
     public delegate void AlarmCheckDel();
     public delegate void SnoozeButtonClickLogicDel();
     public delegate void StopButtonClickDel();
+    public delegate BindingList<Alarm> GetAlarmTimeDel();
+    public delegate void AddButtonClickLogicDel(string finalString);
+    public delegate void EditButtonClickLogicDel(string finalString, int index);
     public partial class Form1 : Form
     {
-        Controller controller;
+        //private Controller controller;
 
-        Timers.Timer newTimer = null;
+        private Timers.Timer newTimer = null;
 
+        ReadFileDel ReadFileDelegate;
+        CountLineDel CountLineDelegate;
+        StartReadingAtLineDel StartReadingAtLineDelegate;
+        AlarmCheckDel AlarmCheckDelegate;
+        SnoozeButtonClickLogicDel SnoozeButtonClickLogicDelegate;
+        StopButtonClickDel StopButtonClickDelegate;
+        GetAlarmTimeDel GetAlarmTimeDelegate;
+        AddButtonClickLogicDel AddButtonClickLogicDelegate;
+        EditButtonClickLogicDel EditButtonClickLogicDelegate;
 
         /// <summary>
         /// Constructor for Form1
@@ -32,22 +44,7 @@ namespace Alarm501
         public Form1()
         {
             InitializeComponent();
-            controller = new Controller(this);
-            if (controller.alarmTime.Count != 0) uxEditButton.Enabled = true;
-
-            ReadFileDel ReadFileDelegate= new ReadFileDel(controller.ReadFile);
-            ReadFileDelegate(); //Call ReadFile from controller
-           
-            uxAlarmList.DataSource = controller.alarmTime;
-
-            newTimer = new System.Timers.Timer(1000);
-            newTimer.Elapsed += AlarmCheck; 
-            newTimer.SynchronizingObject = this;
-            newTimer.AutoReset = true;
-            newTimer.Start();
-
-            if (uxAlarmList.SelectedItem != null) uxEditButton.Enabled = true;
-
+  
         }
 
         /// <summary>
@@ -57,7 +54,6 @@ namespace Alarm501
         /// <param name="e"></param>
         private void AlarmCheck(object sender, ElapsedEventArgs e)
         {
-            AlarmCheckDel AlarmCheckDelegate = new AlarmCheckDel(controller.AlarmCheckLogic);
             AlarmCheckDelegate();
         }
 
@@ -71,12 +67,10 @@ namespace Alarm501
         private void uxAddButton_Click(object sender, EventArgs e)
         {
             
-            AddButton ad = new AddButton();
+            AddButton ad = new AddButton(AddButtonClickLogicDelegate);
             ad.ShowDialog();
-            StartReadingAtLineDel StartReadingAtLineDelegate = new StartReadingAtLineDel(controller.StartReadingAtLine);
-            CountLineDel CountLineDelegate = new CountLineDel(controller.CountLine);
             StartReadingAtLineDelegate(CountLineDelegate());
-            uxAlarmList.DataSource = controller.alarmTime;
+            uxAlarmList.DataSource = GetAlarmTimeDelegate();
             if (uxAlarmList.SelectedItem != null) uxEditButton.Enabled = true;
 
 
@@ -89,11 +83,10 @@ namespace Alarm501
         /// <param name="e"></param>
         private void uxEditButton_Click(object sender, EventArgs e)
         {
-            EditButton ed = new EditButton(controller.alarmTime[uxAlarmList.SelectedIndex], uxAlarmList.SelectedIndex);
+            EditButton ed = new EditButton(GetAlarmTimeDelegate()[uxAlarmList.SelectedIndex], uxAlarmList.SelectedIndex, EditButtonClickLogicDelegate);
             ed.ShowDialog();
-            ReadFileDel ReadFileDelegate = new ReadFileDel(controller.ReadFile);
             ReadFileDelegate(); //Call ReadFile from controller
-            uxAlarmList.DataSource = controller.alarmTime;
+            uxAlarmList.DataSource = GetAlarmTimeDelegate();
             if (uxAlarmList.SelectedItem != null) uxEditButton.Enabled = true;
 
         }
@@ -131,7 +124,6 @@ namespace Alarm501
         private void uxSnoozeButton_Click(object sender, EventArgs e)
         {
             //Create method in controller for this part of the logic
-            SnoozeButtonClickLogicDel SnoozeButtonClickLogicDelegate = new SnoozeButtonClickLogicDel(controller.SnoozeButtonClickLogic);
             SnoozeButtonClickLogicDelegate();
 
             uxSnoozeButton.Enabled = false;
@@ -150,7 +142,6 @@ namespace Alarm501
         private void uxStopButton_Click(object sender, EventArgs e)
         {
             //Create method for this part of the logic
-            StopButtonClickDel StopButtonClickDelegate = new StopButtonClickDel(controller.StopButtonClickLogic);
             StopButtonClickDelegate();
 
             uxSoundLabel.Text = " ";
@@ -158,9 +149,37 @@ namespace Alarm501
             uxStopButton.Enabled = false;
             uxAlarmOffTextBox.Text = " ";
             uxAlarmList.DataSource = null;
-            uxAlarmList.DataSource = controller.alarmTime;
+            uxAlarmList.DataSource = GetAlarmTimeDelegate();
 
+        }
 
+        public void SetUp(ReadFileDel ReadFileDelegate,CountLineDel CountLineDelegate,StartReadingAtLineDel StartReadingAtLineDelegate,
+        AlarmCheckDel AlarmCheckDelegate,SnoozeButtonClickLogicDel SnoozeButtonClickLogicDelegate,StopButtonClickDel StopButtonClickDelegate,
+        GetAlarmTimeDel GetAlarmTimeDelegate, AddButtonClickLogicDel AddButtonClickLogicDelegate, EditButtonClickLogicDel EditButtonClickLogicDelegate)
+        {
+            this.ReadFileDelegate = ReadFileDelegate;
+            this.CountLineDelegate = CountLineDelegate;
+            this.StartReadingAtLineDelegate = StartReadingAtLineDelegate;
+            this.AlarmCheckDelegate = AlarmCheckDelegate;
+            this.SnoozeButtonClickLogicDelegate = SnoozeButtonClickLogicDelegate;
+            this.StopButtonClickDelegate = StopButtonClickDelegate;
+            this.GetAlarmTimeDelegate = GetAlarmTimeDelegate;
+            this.AddButtonClickLogicDelegate = AddButtonClickLogicDelegate;
+            this.EditButtonClickLogicDelegate = EditButtonClickLogicDelegate;
+
+            if (GetAlarmTimeDelegate().Count() != 0) uxEditButton.Enabled = true;
+
+            ReadFileDelegate(); //Call ReadFile from controller
+
+            uxAlarmList.DataSource = GetAlarmTimeDelegate();
+
+            newTimer = new System.Timers.Timer(1000);
+            newTimer.Elapsed += AlarmCheck;
+            newTimer.SynchronizingObject = this;
+            newTimer.AutoReset = true;
+            newTimer.Start();
+
+            if (uxAlarmList.SelectedItem != null) uxEditButton.Enabled = true;
         }
 
        

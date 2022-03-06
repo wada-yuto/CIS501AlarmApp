@@ -11,36 +11,34 @@ using System.IO;
 
 namespace Alarm501
 {
-    public delegate void EditButtonClickLogicDel(Alarm editAlarm, int index);
     public partial class EditButton : Form
     {
-        /// <summary>
-        /// Controller without initializer
-        /// </summary>
-        Controller controller;
 
         /// <summary>
         /// alarm that will be changed
         /// </summary>
-        Alarm editAlarm;
+        private Alarm editAlarm;
 
         /// <summary>
         /// index in alarm list
         /// </summary>
         int index;
 
+        EditButtonClickLogicDel EditButtonClickLogicDelegate;
+
         /// <summary>
         /// Constructor
         /// </summary>
         /// <param name="alarm">Alarm that will be edited</param>
         /// <param name="index">index number of the alarm in the list</param>
-        public EditButton(Alarm alarm, int index)
+        public EditButton(Alarm alarm, int index, EditButtonClickLogicDel EditButtonClickLogicDelegate)
         {
             InitializeComponent();
-            controller = new Controller(this);
+            //controller = new Controller(this);
             editAlarm = alarm;
             uxTimePickerEdit.Value = editAlarm.GetTime();
             this.index = index;
+            this.EditButtonClickLogicDelegate = EditButtonClickLogicDelegate;
             
         }
 
@@ -89,8 +87,42 @@ namespace Alarm501
         /// <param name="e"></param>
         private void uxSetButtonEdit_Click(object sender, EventArgs e)
         {
-            EditButtonClickLogicDel EditButonClickLogicDelegate = new EditButtonClickLogicDel(controller.EditButtonClickLogic);
-            EditButonClickLogicDelegate(editAlarm, index);
+            string timeForAlarm = uxTimePickerEdit.Value.ToLongTimeString();
+            string timeForAlarmWithoutAmPm = timeForAlarm.Split(' ')[0];
+            string runningOrNot;
+            string amPm;
+            string sound = uxAlarmSoundCombo.Text;
+
+            if (timeForAlarm.Contains("AM"))
+            {
+                amPm = "AM";
+                editAlarm.AmPm = amPm;
+            }
+            else
+            {
+                amPm = "PM";
+                editAlarm.AmPm = amPm;
+            }
+
+            bool running;
+
+            if (uxOnCheckBoxEdit.Checked == true)
+            {
+                running = true;
+                editAlarm.Running = true;
+            }
+            else
+            {
+                running = false;
+                editAlarm.Running = false;
+            }
+
+            if (running) runningOrNot = "Running";
+            else runningOrNot = "No";
+
+            //String to write to the text file
+            string textString = timeForAlarmWithoutAmPm + ":" + runningOrNot + ":" + amPm + ":" + sound;
+            EditButtonClickLogicDelegate(textString, index);
             this.Close();
 
         }

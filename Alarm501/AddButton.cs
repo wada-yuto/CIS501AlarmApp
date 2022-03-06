@@ -11,18 +11,18 @@ using System.IO;
 
 namespace Alarm501
 {
-    public delegate void AddButtonClickLogicDel();
     public partial class AddButton : Form
     {
-        Controller controller;
+
+        AddButtonClickLogicDel AddButtonClickLogicDelegate;
 
         /// <summary>
         /// Constructor
         /// </summary>
-        public AddButton()
+        public AddButton(AddButtonClickLogicDel AddButtonClickLogicDelegate)
         {
             InitializeComponent();
-            controller = new Controller(this);
+            this.AddButtonClickLogicDelegate = AddButtonClickLogicDelegate;
         }
 
         /// <summary>
@@ -50,8 +50,25 @@ namespace Alarm501
         /// <param name="e"></param>
         private void uxSetButtonAdd_Click(object sender, EventArgs e)
         {
-            AddButtonClickLogicDel AddButtonClickLogicDelegate = new AddButtonClickLogicDel(controller.AddButtonClickLogic);
-            AddButtonClickLogicDelegate();
+            string timeForAlarm = uxTimePickerAdd.Value.ToLongTimeString();
+            string timeForAlarmWithoutAmPm = timeForAlarm.Split(' ')[0];
+            string runningOrNot;
+            string amPm;
+            string sound = uxSoundCombo.Text;
+
+            if (timeForAlarm.Contains("AM")) amPm = "AM";
+            else amPm = "PM";
+
+            bool running;
+
+            if (uxOnCheckBoxAdd.Checked == true) running = true;
+            else running = false;
+
+            if (running) runningOrNot = "Running";
+            else runningOrNot = "No";
+
+            string finalString = timeForAlarmWithoutAmPm + ":" + runningOrNot + ":" + amPm + ":" + sound;
+            AddButtonClickLogicDelegate(finalString);
             this.Close();
 
 

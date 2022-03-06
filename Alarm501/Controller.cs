@@ -10,28 +10,28 @@ using System.Windows.Forms;
 
 namespace Alarm501
 {
-    public delegate void AlarmOffDel(Sound sound);
-    public delegate int GetSnoozeTimeDel();
-    public delegate string GetTimePickerTimeEditDel();
-    public delegate string GetComboAlarmSoundEditDel();
-    public delegate string GetTimePickerTimeAddDel();
-    public delegate string GetComboAlarmSoundAddDel();
+    
     public class Controller
     {
-        /// <summary>
-        /// Object form1
-        /// </summary>
-        Form form;
+
 
         //List to store alarm time
         public BindingList<Alarm> alarmTime = new BindingList<Alarm>();
 
+        public delegate void AlarmOffDel(Sound sound);
+        public delegate int GetSnoozeTimeDel();
+
+
+        AlarmOffDel AlarmOffDelegate;
+        GetSnoozeTimeDel GetSnoozeTimeDelegate;
+
         /// <summary>
         /// Public Constructor for Controller
         /// </summary>
-        public Controller(Form form)
+        public Controller(AlarmOffDel alarmOffDelegate, GetSnoozeTimeDel GetSnoozeTimeDelegate)
         {
-            this.form = form;
+            this.AlarmOffDelegate = alarmOffDelegate;
+            this.GetSnoozeTimeDelegate = GetSnoozeTimeDelegate;
         }
 
 
@@ -140,16 +140,13 @@ namespace Alarm501
                 DateTime alarmTime = alarm.GetTime();
                 if (currentTime.Hour == alarmTime.Hour && currentTime.Minute == alarmTime.Minute && currentTime.Second == alarmTime.Second)
                 {
-                    AlarmOffDel AlarmOffDelegate = new AlarmOffDel(((Form1)this.form).AlarmOff);
                     AlarmOffDelegate(alarm.sound);
-                    //AlarmOff(alarm.sound); //Pass this as a delegate from views
                     alarm.Ringing = true;
                 }
                 if (alarm.Ringing)
                 {
                     if (currentTime.Hour == alarm.SnoozeTime.Hour && currentTime.Minute == alarm.SnoozeTime.Minute)
                     {
-                        AlarmOffDel AlarmOffDelegate = new AlarmOffDel(((Form1)this.form).AlarmOff);
                         AlarmOffDelegate(alarm.sound);
                     }
                 }
@@ -161,7 +158,6 @@ namespace Alarm501
         /// </summary>
         public void SnoozeButtonClickLogic()
         {
-            GetSnoozeTimeDel GetSnoozeTimeDelegate = new GetSnoozeTimeDel(((Form1)this.form).GetSnoozeTime);
             foreach (Alarm alarm in alarmTime)
             {
                 if (alarm.Ringing)
@@ -191,76 +187,16 @@ namespace Alarm501
         /// 
         /// </summary>
         /// <param name="editAlarm"></param>
-        public void EditButtonClickLogic(Alarm editAlarm ,int index)
+        public void EditButtonClickLogic(string finalString ,int index)
         {
-            GetTimePickerTimeEditDel GetTimePickerTimeDelegate = new GetTimePickerTimeEditDel(((EditButton)this.form).GetTimePickerTimeEdit);
-            GetComboAlarmSoundEditDel GetComboAlarmSoundDelegate = new GetComboAlarmSoundEditDel(((EditButton)this.form).GetComboAlarmSoundEdit);
-            string timeForAlarm = GetTimePickerTimeDelegate();
-            string timeForAlarmWithoutAmPm = timeForAlarm.Split(' ')[0];
-            string runningOrNot;
-            string amPm;
-            string sound = GetComboAlarmSoundDelegate();
-
-            if (timeForAlarm.Contains("AM"))
-            {
-                amPm = "AM";
-                editAlarm.AmPm = amPm;
-            }
-            else
-            {
-                amPm = "PM";
-                editAlarm.AmPm = amPm;
-            }
-
-            bool running;
-
-            if (((EditButton)this.form).uxOnCheckBoxEdit.Checked == true)
-            {
-                running = true;
-                editAlarm.Running = true;
-            }
-            else
-            {
-                running = false;
-                editAlarm.Running = false;
-            }
-
-            if (running) runningOrNot = "Running";
-            else runningOrNot = "No";
-
-            //String to write to the text file
-            string textString = timeForAlarmWithoutAmPm + ":" + runningOrNot + ":" + amPm + ":" + sound;
-            LineChanger(textString, index);
+            LineChanger(finalString, index);
         }
 
         /// <summary>
         /// 
         /// </summary>
-        public void AddButtonClickLogic()
+        public void AddButtonClickLogic(string finalString)
         {
-            GetTimePickerTimeAddDel GetTimePickerTimeAddDelegate = new GetTimePickerTimeAddDel(((AddButton)this.form).GetTimePickerTimeAdd);
-            GetComboAlarmSoundAddDel GetComboAlarmSoundAddDelegate = new GetComboAlarmSoundAddDel(((AddButton)this.form).GetComboAlarmSoundAdd);
-
-            string timeForAlarm = GetTimePickerTimeAddDelegate();
-            string timeForAlarmWithoutAmPm = timeForAlarm.Split(' ')[0];
-            string runningOrNot;
-            string amPm;
-            string sound = GetComboAlarmSoundAddDelegate();
-
-            if (timeForAlarm.Contains("AM")) amPm = "AM";
-            else amPm = "PM";
-
-            bool running;
-
-            if (((AddButton)this.form).uxOnCheckBoxAdd.Checked == true) running = true;
-            else running = false;
-
-            if (running) runningOrNot = "Running";
-            else runningOrNot = "No";
-
-            string finalString = timeForAlarmWithoutAmPm + ":" + runningOrNot + ":" + amPm + ":" + sound;
-
-
             if (File.Exists("..\\..\\Alarm.txt"))
             {
                 using (StreamWriter writer = new StreamWriter("..\\..\\Alarm.txt", true))
@@ -269,6 +205,15 @@ namespace Alarm501
                 }
 
             }
+        }
+
+        /// <summary>
+        /// Return the count of alarmTime
+        /// </summary>
+        /// <returns>Return the count of alarmTime</returns>
+        public BindingList<Alarm> GetAlarmTime()
+        {
+            return alarmTime;
         }
     }
 }

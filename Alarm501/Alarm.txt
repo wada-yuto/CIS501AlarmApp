@@ -1,2 +1,1 @@
-3:55:00:Running:PM:Radar
-3:55:00:Running:PM:Beacon
+3:37:00:Running:PM:Beacon
