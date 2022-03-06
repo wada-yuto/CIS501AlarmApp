@@ -22,9 +22,9 @@ namespace Alarm501
         /// <summary>
         /// index in alarm list
         /// </summary>
-        int index;
+        private int index;
 
-        EditButtonClickLogicDel EditButtonClickLogicDelegate;
+        private EditButtonClickLogicDel EditButtonClickLogicDelegate;
 
         /// <summary>
         /// Constructor

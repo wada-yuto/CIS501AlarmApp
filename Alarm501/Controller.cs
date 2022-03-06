@@ -10,20 +10,18 @@ using System.Windows.Forms;
 
 namespace Alarm501
 {
-    
+    //Delegates from AddButton and EditButton
+    public delegate void AlarmOffDel(Sound sound);
+    public delegate int GetSnoozeTimeDel();
     public class Controller
     {
 
 
         //List to store alarm time
-        public BindingList<Alarm> alarmTime = new BindingList<Alarm>();
+        private BindingList<Alarm> alarmTime = new BindingList<Alarm>();
 
-        public delegate void AlarmOffDel(Sound sound);
-        public delegate int GetSnoozeTimeDel();
-
-
-        AlarmOffDel AlarmOffDelegate;
-        GetSnoozeTimeDel GetSnoozeTimeDelegate;
+        private AlarmOffDel AlarmOffDelegate;
+        private GetSnoozeTimeDel GetSnoozeTimeDelegate;
 
         /// <summary>
         /// Public Constructor for Controller
@@ -184,16 +182,17 @@ namespace Alarm501
         }
 
         /// <summary>
-        /// 
+        /// Method that handles EditButtonClickLogic
         /// </summary>
-        /// <param name="editAlarm"></param>
+        /// <param name="finalString">finalString that will be written in the file</param>
+        /// <param name="index">index where the text will be written at</param>
         public void EditButtonClickLogic(string finalString ,int index)
         {
             LineChanger(finalString, index);
         }
 
         /// <summary>
-        /// 
+        /// Method that handled AddButtonClickLogic
         /// </summary>
         public void AddButtonClickLogic(string finalString)
         {

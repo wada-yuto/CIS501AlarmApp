@@ -13,8 +13,8 @@ namespace Alarm501
 {
     public partial class AddButton : Form
     {
-
-        AddButtonClickLogicDel AddButtonClickLogicDelegate;
+        
+        private AddButtonClickLogicDel AddButtonClickLogicDelegate;
 
         /// <summary>
         /// Constructor

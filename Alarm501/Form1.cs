@@ -28,15 +28,15 @@ namespace Alarm501
 
         private Timers.Timer newTimer = null;
 
-        ReadFileDel ReadFileDelegate;
-        CountLineDel CountLineDelegate;
-        StartReadingAtLineDel StartReadingAtLineDelegate;
-        AlarmCheckDel AlarmCheckDelegate;
-        SnoozeButtonClickLogicDel SnoozeButtonClickLogicDelegate;
-        StopButtonClickDel StopButtonClickDelegate;
-        GetAlarmTimeDel GetAlarmTimeDelegate;
-        AddButtonClickLogicDel AddButtonClickLogicDelegate;
-        EditButtonClickLogicDel EditButtonClickLogicDelegate;
+        private ReadFileDel ReadFileDelegate;
+        private CountLineDel CountLineDelegate;
+        private StartReadingAtLineDel StartReadingAtLineDelegate;
+        private AlarmCheckDel AlarmCheckDelegate;
+        private SnoozeButtonClickLogicDel SnoozeButtonClickLogicDelegate;
+        private StopButtonClickDel StopButtonClickDelegate;
+        private GetAlarmTimeDel GetAlarmTimeDelegate;
+        private AddButtonClickLogicDel AddButtonClickLogicDelegate;
+        private EditButtonClickLogicDel EditButtonClickLogicDelegate;
 
         /// <summary>
         /// Constructor for Form1
@@ -153,6 +153,18 @@ namespace Alarm501
 
         }
 
+        /// <summary>
+        /// Sets up the program and all the delegates
+        /// </summary>
+        /// <param name="ReadFileDelegate"></param>
+        /// <param name="CountLineDelegate"></param>
+        /// <param name="StartReadingAtLineDelegate"></param>
+        /// <param name="AlarmCheckDelegate"></param>
+        /// <param name="SnoozeButtonClickLogicDelegate"></param>
+        /// <param name="StopButtonClickDelegate"></param>
+        /// <param name="GetAlarmTimeDelegate"></param>
+        /// <param name="AddButtonClickLogicDelegate"></param>
+        /// <param name="EditButtonClickLogicDelegate"></param>
         public void SetUp(ReadFileDel ReadFileDelegate,CountLineDel CountLineDelegate,StartReadingAtLineDel StartReadingAtLineDelegate,
         AlarmCheckDel AlarmCheckDelegate,SnoozeButtonClickLogicDel SnoozeButtonClickLogicDelegate,StopButtonClickDel StopButtonClickDelegate,
         GetAlarmTimeDel GetAlarmTimeDelegate, AddButtonClickLogicDel AddButtonClickLogicDelegate, EditButtonClickLogicDel EditButtonClickLogicDelegate)
