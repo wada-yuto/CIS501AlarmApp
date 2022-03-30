@@ -7,6 +7,8 @@ using System.IO;
 using System.ComponentModel;
 using System.Timers;
 using System.Windows.Forms;
+using Timers = System.Timers;
+
 
 namespace Alarm501
 {
@@ -16,7 +18,7 @@ namespace Alarm501
     public class Controller
     {
 
-
+        private Timers.Timer newTimer = null;
         //List to store alarm time
         private BindingList<Alarm> alarmTime = new BindingList<Alarm>();
 
@@ -214,5 +216,16 @@ namespace Alarm501
         {
             return alarmTime;
         }
+
+        /*
+        public void AlarmUpdate()
+        {
+            newTimer = new System.Timers.Timer(1000);
+            newTimer.Elapsed += AlarmCheckLogic;
+            newTimer.SynchronizingObject = this;
+            newTimer.AutoReset = true;
+            newTimer.Start();
+        }
+        */
     }
 }

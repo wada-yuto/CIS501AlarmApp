@@ -4,6 +4,13 @@
     <OutputType>Exe</OutputType>
     <TargetFramework>net5.0</TargetFramework>
     <RootNamespace>Alram501_Console</RootNamespace>
+    <AssemblyName>Alram501_Console</AssemblyName>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="Alarm501_Library">
+      <HintPath>..\Alarm501-Library\obj\Debug\net5.0\Alarm501_Library.dll</HintPath>
+    </Reference>
+  </ItemGroup>
 
 </Project>

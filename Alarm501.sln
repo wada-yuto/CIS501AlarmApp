@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alarm501", "Alarm501\Alarm5
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alram501-Console", "Alram501-Console\Alram501-Console.csproj", "{7E5FD9C4-4C22-4E45-9BE8-8A5F2FD066E6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alarm501-Library", "Alarm501-Library\Alarm501-Library.csproj", "{AE013771-B9DB-44E5-9738-20616FB19CA9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alarm501_Library", "Alarm501-Library\Alarm501_Library.csproj", "{1691E93C-4BE6-4807-85E7-C240084BD1A0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +23,10 @@ Global
 		{7E5FD9C4-4C22-4E45-9BE8-8A5F2FD066E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7E5FD9C4-4C22-4E45-9BE8-8A5F2FD066E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7E5FD9C4-4C22-4E45-9BE8-8A5F2FD066E6}.Release|Any CPU.Build.0 = Release|Any CPU
-		{AE013771-B9DB-44E5-9738-20616FB19CA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AE013771-B9DB-44E5-9738-20616FB19CA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AE013771-B9DB-44E5-9738-20616FB19CA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AE013771-B9DB-44E5-9738-20616FB19CA9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1691E93C-4BE6-4807-85E7-C240084BD1A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1691E93C-4BE6-4807-85E7-C240084BD1A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1691E93C-4BE6-4807-85E7-C240084BD1A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1691E93C-4BE6-4807-85E7-C240084BD1A0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

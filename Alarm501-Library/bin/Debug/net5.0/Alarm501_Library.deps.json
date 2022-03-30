@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "Alarm501_Library/1.0.0": {
+        "runtime": {
+          "Alarm501_Library.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Alarm501_Library/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
