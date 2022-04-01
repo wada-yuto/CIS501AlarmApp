@@ -8,19 +8,19 @@
     "net5.0": []
   },
   "packageFolders": {
-    "C:\\Users\\yuto808263\\.nuget\\packages\\": {}
+    "C:\\Users\\yutow\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\yuto808263\\Desktop\\Alarm501\\Alarm501-Library\\Alarm501_Library.csproj",
+      "projectUniqueName": "C:\\Users\\yutow\\Desktop\\Spring 2022\\CIS 501\\Alarm501Project3\\Alarm501\\Alarm501-Library\\Alarm501_Library.csproj",
       "projectName": "Alarm501_Library",
-      "projectPath": "C:\\Users\\yuto808263\\Desktop\\Alarm501\\Alarm501-Library\\Alarm501_Library.csproj",
-      "packagesPath": "C:\\Users\\yuto808263\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\yuto808263\\Desktop\\Alarm501\\Alarm501-Library\\obj\\",
+      "projectPath": "C:\\Users\\yutow\\Desktop\\Spring 2022\\CIS 501\\Alarm501Project3\\Alarm501\\Alarm501-Library\\Alarm501_Library.csproj",
+      "packagesPath": "C:\\Users\\yutow\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\yutow\\Desktop\\Spring 2022\\CIS 501\\Alarm501Project3\\Alarm501\\Alarm501-Library\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\yuto808263\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\yutow\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -60,7 +60,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.406\\RuntimeIdentifierGraph.json"
       }
     }
   }
