@@ -1,15 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "bVE1VH4s+EhjfKZLQEA0kL8Co+TL1zAJkq3J0N5byCLzsPnUxkKBQkHxeAcCwfs3IBKuaDR9uruCfETq3bpThw==",
+  "dgSpecHash": "bv4CdnNDha/hkg/CpV/lD4jWTRKfybMJLhgANTM9nM0PVHstvyFp8uLHnn1rhEVhs21V0+XABdO+BYC7RJCF6w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\yutow\\Desktop\\Spring 2022\\CIS 501\\Alarm501Project3\\Alarm501\\Alram501-Console\\Alram501-Console.csproj",
+  "projectFilePath": "C:\\Users\\tucke\\Desktop\\Project3.0\\Alram501-Console\\Alram501-Console.csproj",
   "expectedPackageFiles": [],
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problem reading the cache file C:\\Users\\yutow\\Desktop\\Spring 2022\\CIS 501\\Alarm501Project3\\Alarm501\\Alram501-Console\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  "logs": []
 }

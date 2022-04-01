@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\yutow\\Desktop\\Spring 2022\\CIS 501\\Alarm501Project3\\Alarm501\\Alram501-Console\\Alram501-Console.csproj": {}
+    "C:\\Users\\tucke\\Desktop\\Project3.0\\Alram501-Console\\Alram501-Console.csproj": {}
   },
   "projects": {
-    "C:\\Users\\yutow\\Desktop\\Spring 2022\\CIS 501\\Alarm501Project3\\Alarm501\\Alarm501-Library\\Alarm501_Library.csproj": {
+    "C:\\Users\\tucke\\Desktop\\Project3.0\\Alarm501-Library\\Alarm501_Library.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\yutow\\Desktop\\Spring 2022\\CIS 501\\Alarm501Project3\\Alarm501\\Alarm501-Library\\Alarm501_Library.csproj",
+        "projectUniqueName": "C:\\Users\\tucke\\Desktop\\Project3.0\\Alarm501-Library\\Alarm501_Library.csproj",
         "projectName": "Alarm501_Library",
-        "projectPath": "C:\\Users\\yutow\\Desktop\\Spring 2022\\CIS 501\\Alarm501Project3\\Alarm501\\Alarm501-Library\\Alarm501_Library.csproj",
-        "packagesPath": "C:\\Users\\yutow\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\yutow\\Desktop\\Spring 2022\\CIS 501\\Alarm501Project3\\Alarm501\\Alarm501-Library\\obj\\",
+        "projectPath": "C:\\Users\\tucke\\Desktop\\Project3.0\\Alarm501-Library\\Alarm501_Library.csproj",
+        "packagesPath": "C:\\Users\\tucke\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\tucke\\Desktop\\Project3.0\\Alarm501-Library\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\yutow\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\tucke\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -54,21 +58,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.406\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\yutow\\Desktop\\Spring 2022\\CIS 501\\Alarm501Project3\\Alarm501\\Alram501-Console\\Alram501-Console.csproj": {
+    "C:\\Users\\tucke\\Desktop\\Project3.0\\Alram501-Console\\Alram501-Console.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\yutow\\Desktop\\Spring 2022\\CIS 501\\Alarm501Project3\\Alarm501\\Alram501-Console\\Alram501-Console.csproj",
+        "projectUniqueName": "C:\\Users\\tucke\\Desktop\\Project3.0\\Alram501-Console\\Alram501-Console.csproj",
         "projectName": "Alram501_Console",
-        "projectPath": "C:\\Users\\yutow\\Desktop\\Spring 2022\\CIS 501\\Alarm501Project3\\Alarm501\\Alram501-Console\\Alram501-Console.csproj",
-        "packagesPath": "C:\\Users\\yutow\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\yutow\\Desktop\\Spring 2022\\CIS 501\\Alarm501Project3\\Alarm501\\Alram501-Console\\obj\\",
+        "projectPath": "C:\\Users\\tucke\\Desktop\\Project3.0\\Alram501-Console\\Alram501-Console.csproj",
+        "packagesPath": "C:\\Users\\tucke\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\tucke\\Desktop\\Project3.0\\Alram501-Console\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\yutow\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\tucke\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -82,8 +90,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\yutow\\Desktop\\Spring 2022\\CIS 501\\Alarm501Project3\\Alarm501\\Alarm501-Library\\Alarm501_Library.csproj": {
-                "projectPath": "C:\\Users\\yutow\\Desktop\\Spring 2022\\CIS 501\\Alarm501Project3\\Alarm501\\Alarm501-Library\\Alarm501_Library.csproj"
+              "C:\\Users\\tucke\\Desktop\\Project3.0\\Alarm501-Library\\Alarm501_Library.csproj": {
+                "projectPath": "C:\\Users\\tucke\\Desktop\\Project3.0\\Alarm501-Library\\Alarm501_Library.csproj"
               }
             }
           }
@@ -112,7 +120,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.406\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

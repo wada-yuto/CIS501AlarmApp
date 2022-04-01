@@ -8,19 +8,15 @@
     ".NETCoreApp,Version=v5.0": {
       "Alarm501_GUI/1.0.0": {
         "dependencies": {
-          "Alarm501_Library": "1.0.0",
-          "Alarm501_Library.Reference": "1.0.0.0"
+          "Alarm501_Library": "1.0.0"
         },
         "runtime": {
           "Alarm501_GUI.dll": {}
         }
       },
-      "Alarm501_Library.Reference/1.0.0.0": {
+      "Alarm501_Library/1.0.0": {
         "runtime": {
-          "Alarm501_Library.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
-          }
+          "Alarm501_Library.dll": {}
         }
       }
     }
@@ -31,8 +27,8 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Alarm501_Library.Reference/1.0.0.0": {
-      "type": "reference",
+    "Alarm501_Library/1.0.0": {
+      "type": "project",
       "serviceable": false,
       "sha512": ""
     }

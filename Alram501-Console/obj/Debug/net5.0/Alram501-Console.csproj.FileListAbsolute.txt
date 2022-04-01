@@ -1,79 +1,19 @@
-C:\Users\yutow\Desktop\Spring 2022\CIS 501\Alarm501P2\Alram501-Console\obj\Debug\net5.0\Alram501-Console.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\yutow\Desktop\Spring 2022\CIS 501\Alarm501P2\Alram501-Console\obj\Debug\net5.0\Alram501-Console.AssemblyInfoInputs.cache
-C:\Users\yutow\Desktop\Spring 2022\CIS 501\Alarm501P2\Alram501-Console\obj\Debug\net5.0\Alram501-Console.AssemblyInfo.cs
-C:\Users\yutow\Desktop\Spring 2022\CIS 501\Alarm501P2\Alram501-Console\obj\Debug\net5.0\Alram501-Console.csproj.CoreCompileInputs.cache
-C:\Users\yutow\Desktop\Spring 2022\CIS 501\Alarm501P2\Alram501-Console\obj\Debug\net5.0\Alram501-Console.genruntimeconfig.cache
-C:\Users\yutow\Desktop\Spring 2022\CIS 501\Alarm501P2\Alram501-Console\obj\Debug\net5.0\Alram501-Console.csproj.AssemblyReference.cache
-C:\Users\yutow\Desktop\Spring 2022\CIS 501\Alarm501P2\Alram501-Console\bin\Debug\net5.0\Alram501_Console.exe
-C:\Users\yutow\Desktop\Spring 2022\CIS 501\Alarm501P2\Alram501-Console\bin\Debug\net5.0\Alram501_Console.deps.json
-C:\Users\yutow\Desktop\Spring 2022\CIS 501\Alarm501P2\Alram501-Console\bin\Debug\net5.0\Alram501_Console.runtimeconfig.json
-C:\Users\yutow\Desktop\Spring 2022\CIS 501\Alarm501P2\Alram501-Console\bin\Debug\net5.0\Alram501_Console.runtimeconfig.dev.json
-C:\Users\yutow\Desktop\Spring 2022\CIS 501\Alarm501P2\Alram501-Console\bin\Debug\net5.0\Alram501_Console.dll
-C:\Users\yutow\Desktop\Spring 2022\CIS 501\Alarm501P2\Alram501-Console\bin\Debug\net5.0\ref\Alram501_Console.dll
-C:\Users\yutow\Desktop\Spring 2022\CIS 501\Alarm501P2\Alram501-Console\bin\Debug\net5.0\Alram501_Console.pdb
-C:\Users\yutow\Desktop\Spring 2022\CIS 501\Alarm501P2\Alram501-Console\bin\Debug\net5.0\Alarm501_Library.dll
-C:\Users\yutow\Desktop\Spring 2022\CIS 501\Alarm501P2\Alram501-Console\bin\Debug\net5.0\Alarm501_Library.pdb
-C:\Users\yutow\Desktop\Spring 2022\CIS 501\Alarm501P2\Alram501-Console\obj\Debug\net5.0\Alram501-Console.csproj.CopyComplete
-C:\Users\yutow\Desktop\Spring 2022\CIS 501\Alarm501P2\Alram501-Console\obj\Debug\net5.0\Alram501_Console.dll
-C:\Users\yutow\Desktop\Spring 2022\CIS 501\Alarm501P2\Alram501-Console\obj\Debug\net5.0\ref\Alram501_Console.dll
-C:\Users\yutow\Desktop\Spring 2022\CIS 501\Alarm501P2\Alram501-Console\obj\Debug\net5.0\Alram501_Console.pdb
-C:\Users\yuto808263\Desktop\Alarm501\Alram501-Console\bin\Debug\net5.0\Alram501_Console.exe
-C:\Users\yuto808263\Desktop\Alarm501\Alram501-Console\bin\Debug\net5.0\Alram501_Console.deps.json
-C:\Users\yuto808263\Desktop\Alarm501\Alram501-Console\bin\Debug\net5.0\Alram501_Console.runtimeconfig.json
-C:\Users\yuto808263\Desktop\Alarm501\Alram501-Console\bin\Debug\net5.0\Alram501_Console.runtimeconfig.dev.json
-C:\Users\yuto808263\Desktop\Alarm501\Alram501-Console\bin\Debug\net5.0\Alram501_Console.dll
-C:\Users\yuto808263\Desktop\Alarm501\Alram501-Console\bin\Debug\net5.0\ref\Alram501_Console.dll
-C:\Users\yuto808263\Desktop\Alarm501\Alram501-Console\bin\Debug\net5.0\Alram501_Console.pdb
-C:\Users\yuto808263\Desktop\Alarm501\Alram501-Console\bin\Debug\net5.0\Alarm501_Library.dll
-C:\Users\yuto808263\Desktop\Alarm501\Alram501-Console\bin\Debug\net5.0\Alarm501_Library.pdb
-C:\Users\yuto808263\Desktop\Alarm501\Alram501-Console\obj\Debug\net5.0\Alram501-Console.csproj.AssemblyReference.cache
-C:\Users\yuto808263\Desktop\Alarm501\Alram501-Console\obj\Debug\net5.0\Alram501-Console.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\yuto808263\Desktop\Alarm501\Alram501-Console\obj\Debug\net5.0\Alram501-Console.AssemblyInfoInputs.cache
-C:\Users\yuto808263\Desktop\Alarm501\Alram501-Console\obj\Debug\net5.0\Alram501-Console.AssemblyInfo.cs
-C:\Users\yuto808263\Desktop\Alarm501\Alram501-Console\obj\Debug\net5.0\Alram501-Console.csproj.CoreCompileInputs.cache
-C:\Users\yuto808263\Desktop\Alarm501\Alram501-Console\obj\Debug\net5.0\Alram501-Console.csproj.CopyComplete
-C:\Users\yuto808263\Desktop\Alarm501\Alram501-Console\obj\Debug\net5.0\Alram501_Console.dll
-C:\Users\yuto808263\Desktop\Alarm501\Alram501-Console\obj\Debug\net5.0\ref\Alram501_Console.dll
-C:\Users\yuto808263\Desktop\Alarm501\Alram501-Console\obj\Debug\net5.0\Alram501_Console.pdb
-C:\Users\yuto808263\Desktop\Alarm501\Alram501-Console\obj\Debug\net5.0\Alram501-Console.genruntimeconfig.cache
-<<<<<<< HEAD
-C:\Users\yutow\Desktop\Spring 2022\CIS 501\Alarm501Project3\Alarm501\Alram501-Console\bin\Debug\net5.0\Alram501_Console.exe
-C:\Users\yutow\Desktop\Spring 2022\CIS 501\Alarm501Project3\Alarm501\Alram501-Console\bin\Debug\net5.0\Alram501_Console.deps.json
-C:\Users\yutow\Desktop\Spring 2022\CIS 501\Alarm501Project3\Alarm501\Alram501-Console\bin\Debug\net5.0\Alram501_Console.runtimeconfig.json
-C:\Users\yutow\Desktop\Spring 2022\CIS 501\Alarm501Project3\Alarm501\Alram501-Console\bin\Debug\net5.0\Alram501_Console.runtimeconfig.dev.json
-C:\Users\yutow\Desktop\Spring 2022\CIS 501\Alarm501Project3\Alarm501\Alram501-Console\bin\Debug\net5.0\Alram501_Console.dll
-C:\Users\yutow\Desktop\Spring 2022\CIS 501\Alarm501Project3\Alarm501\Alram501-Console\bin\Debug\net5.0\ref\Alram501_Console.dll
-C:\Users\yutow\Desktop\Spring 2022\CIS 501\Alarm501Project3\Alarm501\Alram501-Console\bin\Debug\net5.0\Alram501_Console.pdb
-C:\Users\yutow\Desktop\Spring 2022\CIS 501\Alarm501Project3\Alarm501\Alram501-Console\bin\Debug\net5.0\Alarm501_Library.dll
-C:\Users\yutow\Desktop\Spring 2022\CIS 501\Alarm501Project3\Alarm501\Alram501-Console\bin\Debug\net5.0\Alarm501_Library.pdb
-C:\Users\yutow\Desktop\Spring 2022\CIS 501\Alarm501Project3\Alarm501\Alram501-Console\obj\Debug\net5.0\Alram501-Console.csproj.AssemblyReference.cache
-C:\Users\yutow\Desktop\Spring 2022\CIS 501\Alarm501Project3\Alarm501\Alram501-Console\obj\Debug\net5.0\Alram501-Console.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\yutow\Desktop\Spring 2022\CIS 501\Alarm501Project3\Alarm501\Alram501-Console\obj\Debug\net5.0\Alram501-Console.AssemblyInfoInputs.cache
-C:\Users\yutow\Desktop\Spring 2022\CIS 501\Alarm501Project3\Alarm501\Alram501-Console\obj\Debug\net5.0\Alram501-Console.AssemblyInfo.cs
-C:\Users\yutow\Desktop\Spring 2022\CIS 501\Alarm501Project3\Alarm501\Alram501-Console\obj\Debug\net5.0\Alram501-Console.csproj.CoreCompileInputs.cache
-C:\Users\yutow\Desktop\Spring 2022\CIS 501\Alarm501Project3\Alarm501\Alram501-Console\obj\Debug\net5.0\Alram501-Console.csproj.CopyComplete
-C:\Users\yutow\Desktop\Spring 2022\CIS 501\Alarm501Project3\Alarm501\Alram501-Console\obj\Debug\net5.0\Alram501_Console.dll
-C:\Users\yutow\Desktop\Spring 2022\CIS 501\Alarm501Project3\Alarm501\Alram501-Console\obj\Debug\net5.0\ref\Alram501_Console.dll
-C:\Users\yutow\Desktop\Spring 2022\CIS 501\Alarm501Project3\Alarm501\Alram501-Console\obj\Debug\net5.0\Alram501_Console.pdb
-C:\Users\yutow\Desktop\Spring 2022\CIS 501\Alarm501Project3\Alarm501\Alram501-Console\obj\Debug\net5.0\Alram501-Console.genruntimeconfig.cache
-=======
-C:\Users\tucke\Desktop\Project 3\Alram501-Console\obj\Debug\net5.0\Alram501-Console.csproj.AssemblyReference.cache
-C:\Users\tucke\Desktop\Project 3\Alram501-Console\obj\Debug\net5.0\Alram501-Console.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\tucke\Desktop\Project 3\Alram501-Console\obj\Debug\net5.0\Alram501-Console.AssemblyInfoInputs.cache
-C:\Users\tucke\Desktop\Project 3\Alram501-Console\obj\Debug\net5.0\Alram501-Console.AssemblyInfo.cs
-C:\Users\tucke\Desktop\Project 3\Alram501-Console\obj\Debug\net5.0\Alram501-Console.csproj.CoreCompileInputs.cache
-C:\Users\tucke\Desktop\Project 3\Alram501-Console\obj\Debug\net5.0\Alram501_Console.dll
-C:\Users\tucke\Desktop\Project 3\Alram501-Console\obj\Debug\net5.0\ref\Alram501_Console.dll
-C:\Users\tucke\Desktop\Project 3\Alram501-Console\obj\Debug\net5.0\Alram501_Console.pdb
-C:\Users\tucke\Desktop\Project 3\Alram501-Console\bin\Debug\net5.0\Alram501_Console.exe
-C:\Users\tucke\Desktop\Project 3\Alram501-Console\bin\Debug\net5.0\Alram501_Console.deps.json
-C:\Users\tucke\Desktop\Project 3\Alram501-Console\bin\Debug\net5.0\Alram501_Console.runtimeconfig.json
-C:\Users\tucke\Desktop\Project 3\Alram501-Console\bin\Debug\net5.0\Alram501_Console.runtimeconfig.dev.json
-C:\Users\tucke\Desktop\Project 3\Alram501-Console\bin\Debug\net5.0\Alram501_Console.dll
-C:\Users\tucke\Desktop\Project 3\Alram501-Console\bin\Debug\net5.0\ref\Alram501_Console.dll
-C:\Users\tucke\Desktop\Project 3\Alram501-Console\bin\Debug\net5.0\Alram501_Console.pdb
-C:\Users\tucke\Desktop\Project 3\Alram501-Console\bin\Debug\net5.0\Alarm501_Library.dll
-C:\Users\tucke\Desktop\Project 3\Alram501-Console\bin\Debug\net5.0\Alarm501_Library.pdb
-C:\Users\tucke\Desktop\Project 3\Alram501-Console\obj\Debug\net5.0\Alram501-Console.csproj.CopyComplete
-C:\Users\tucke\Desktop\Project 3\Alram501-Console\obj\Debug\net5.0\Alram501-Console.genruntimeconfig.cache
->>>>>>> f554945c74687d3545d080edc2f43d475d758ade
+C:\Users\tucke\Desktop\Project3.0\Alram501-Console\bin\Debug\net5.0\Alram501_Console.exe
+C:\Users\tucke\Desktop\Project3.0\Alram501-Console\bin\Debug\net5.0\Alram501_Console.deps.json
+C:\Users\tucke\Desktop\Project3.0\Alram501-Console\bin\Debug\net5.0\Alram501_Console.runtimeconfig.json
+C:\Users\tucke\Desktop\Project3.0\Alram501-Console\bin\Debug\net5.0\Alram501_Console.runtimeconfig.dev.json
+C:\Users\tucke\Desktop\Project3.0\Alram501-Console\bin\Debug\net5.0\Alram501_Console.dll
+C:\Users\tucke\Desktop\Project3.0\Alram501-Console\bin\Debug\net5.0\ref\Alram501_Console.dll
+C:\Users\tucke\Desktop\Project3.0\Alram501-Console\bin\Debug\net5.0\Alram501_Console.pdb
+C:\Users\tucke\Desktop\Project3.0\Alram501-Console\bin\Debug\net5.0\Alarm501_Library.dll
+C:\Users\tucke\Desktop\Project3.0\Alram501-Console\bin\Debug\net5.0\Alarm501_Library.pdb
+C:\Users\tucke\Desktop\Project3.0\Alram501-Console\obj\Debug\net5.0\Alram501-Console.csproj.AssemblyReference.cache
+C:\Users\tucke\Desktop\Project3.0\Alram501-Console\obj\Debug\net5.0\Alram501-Console.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\tucke\Desktop\Project3.0\Alram501-Console\obj\Debug\net5.0\Alram501-Console.AssemblyInfoInputs.cache
+C:\Users\tucke\Desktop\Project3.0\Alram501-Console\obj\Debug\net5.0\Alram501-Console.AssemblyInfo.cs
+C:\Users\tucke\Desktop\Project3.0\Alram501-Console\obj\Debug\net5.0\Alram501-Console.csproj.CoreCompileInputs.cache
+C:\Users\tucke\Desktop\Project3.0\Alram501-Console\obj\Debug\net5.0\Alram501-Console.csproj.CopyComplete
+C:\Users\tucke\Desktop\Project3.0\Alram501-Console\obj\Debug\net5.0\Alram501_Console.dll
+C:\Users\tucke\Desktop\Project3.0\Alram501-Console\obj\Debug\net5.0\ref\Alram501_Console.dll
+C:\Users\tucke\Desktop\Project3.0\Alram501-Console\obj\Debug\net5.0\Alram501_Console.pdb
+C:\Users\tucke\Desktop\Project3.0\Alram501-Console\obj\Debug\net5.0\Alram501-Console.genruntimeconfig.cache
