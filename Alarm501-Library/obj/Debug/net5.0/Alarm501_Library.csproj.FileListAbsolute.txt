@@ -9,3 +9,15 @@ C:\Users\tucke\Desktop\Project3.0\Alarm501-Library\obj\Debug\net5.0\Alarm501_Lib
 C:\Users\tucke\Desktop\Project3.0\Alarm501-Library\obj\Debug\net5.0\Alarm501_Library.dll
 C:\Users\tucke\Desktop\Project3.0\Alarm501-Library\obj\Debug\net5.0\ref\Alarm501_Library.dll
 C:\Users\tucke\Desktop\Project3.0\Alarm501-Library\obj\Debug\net5.0\Alarm501_Library.pdb
+C:\Users\yuto808263\Desktop\Alarm501Project3\Alarm501\Alarm501-Library\bin\Debug\net5.0\Alarm501_Library.deps.json
+C:\Users\yuto808263\Desktop\Alarm501Project3\Alarm501\Alarm501-Library\bin\Debug\net5.0\Alarm501_Library.dll
+C:\Users\yuto808263\Desktop\Alarm501Project3\Alarm501\Alarm501-Library\bin\Debug\net5.0\ref\Alarm501_Library.dll
+C:\Users\yuto808263\Desktop\Alarm501Project3\Alarm501\Alarm501-Library\bin\Debug\net5.0\Alarm501_Library.pdb
+C:\Users\yuto808263\Desktop\Alarm501Project3\Alarm501\Alarm501-Library\obj\Debug\net5.0\Alarm501_Library.csproj.AssemblyReference.cache
+C:\Users\yuto808263\Desktop\Alarm501Project3\Alarm501\Alarm501-Library\obj\Debug\net5.0\Alarm501_Library.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\yuto808263\Desktop\Alarm501Project3\Alarm501\Alarm501-Library\obj\Debug\net5.0\Alarm501_Library.AssemblyInfoInputs.cache
+C:\Users\yuto808263\Desktop\Alarm501Project3\Alarm501\Alarm501-Library\obj\Debug\net5.0\Alarm501_Library.AssemblyInfo.cs
+C:\Users\yuto808263\Desktop\Alarm501Project3\Alarm501\Alarm501-Library\obj\Debug\net5.0\Alarm501_Library.csproj.CoreCompileInputs.cache
+C:\Users\yuto808263\Desktop\Alarm501Project3\Alarm501\Alarm501-Library\obj\Debug\net5.0\Alarm501_Library.dll
+C:\Users\yuto808263\Desktop\Alarm501Project3\Alarm501\Alarm501-Library\obj\Debug\net5.0\ref\Alarm501_Library.dll
+C:\Users\yuto808263\Desktop\Alarm501Project3\Alarm501\Alarm501-Library\obj\Debug\net5.0\Alarm501_Library.pdb

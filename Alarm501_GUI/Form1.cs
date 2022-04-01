@@ -11,6 +11,7 @@ using Timers = System.Timers;
 using System.IO;
 using System.Timers;
 using Alarm501;
+using System.Threading;
 
 
 namespace Alarm501_GUI
@@ -89,16 +90,38 @@ namespace Alarm501_GUI
             if (uxAlarmList.SelectedItem != null) uxEditButton.Enabled = true;
         }
 
+        private void SetText()
+        {
+            var threadParameters = new System.Threading.ThreadStart(delegate { AlarmOff(Sound.Beacon); });
+            var thread2 = new System.Threading.Thread(threadParameters);
+            thread2.Start();
+        }
+
         /// <summary>
         /// Function that changes textbox when alarm goes off
         /// </summary>
         public void AlarmOff(Sound sound)
         {
-            uxAlarmOffTextBox.Text = "Alarm is going off!";
+
+            if (uxAlarmOffTextBox.InvokeRequired)
+            {
+                Action safeWrite = delegate { AlarmOff(Sound.Beacon); };
+                uxAlarmOffTextBox.Invoke(safeWrite);
+            }
+            else
+            {
+                uxAlarmOffTextBox.Text = "Alarm is going off";
+            }
+
             uxSoundLabel.Text = sound.ToString();
             uxSnoozeButton.Enabled = true;
-            uxStopButton.Enabled = true;
+            uxStopButton.Enabled = true;            
             uxSnoozeTimeUpDown.Enabled = true;
+        }
+
+        private void Driver1()
+        {
+            
         }
 
         /// <summary>
@@ -177,12 +200,13 @@ namespace Alarm501_GUI
             ReadFileDelegate(); //Call ReadFile from controller
 
             uxAlarmList.DataSource = GetAlarmTimeDelegate();
-
+            /*
             newTimer = new System.Timers.Timer(1000);
             newTimer.Elapsed += AlarmCheck;
             newTimer.SynchronizingObject = this;
             newTimer.AutoReset = true;
             newTimer.Start();
+            */
 
             if (uxAlarmList.SelectedItem != null) uxEditButton.Enabled = true;
         }

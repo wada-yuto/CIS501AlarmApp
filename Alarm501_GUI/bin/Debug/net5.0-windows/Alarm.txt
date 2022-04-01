@@ -1,3 +1,1 @@
-11:22:13:Running:PM:Beacon,
-11:25:00:Running:PM:Reflection
-12:05:01:No:AM:
+1:40:40:Running:PM:Beacon

@@ -17,7 +17,7 @@ namespace Alarm501
     public class Controller
     {
 
-        private Timers.Timer newTimer = null;
+        private Timers.Timer newTimer = new Timer(1000);
         //List to store alarm time
         public BindingList<Alarm> alarmTime = new BindingList<Alarm>();
 
@@ -29,7 +29,9 @@ namespace Alarm501
         /// </summary>
         public Controller()
         {
-
+            newTimer.Elapsed += ElapsedEvent;
+            newTimer.AutoReset = true;
+            newTimer.Start();
         }
 
         /// <summary>
@@ -39,6 +41,14 @@ namespace Alarm501
         {
             this.AlarmOffDelegate = alarmOffDelegate;
             this.GetSnoozeTimeDelegate = GetSnoozeTimeDelegate;
+            newTimer.Elapsed += ElapsedEvent;
+            newTimer.AutoReset = true;
+            newTimer.Start();
+        }
+
+        private void ElapsedEvent(object o, ElapsedEventArgs e)
+        {
+            AlarmCheckLogic();
         }
 
 
