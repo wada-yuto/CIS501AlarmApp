@@ -19,10 +19,18 @@ namespace Alarm501
 
         private Timers.Timer newTimer = null;
         //List to store alarm time
-        private BindingList<Alarm> alarmTime = new BindingList<Alarm>();
+        public BindingList<Alarm> alarmTime = new BindingList<Alarm>();
 
         private AlarmOffDel AlarmOffDelegate;
         private GetSnoozeTimeDel GetSnoozeTimeDelegate;
+
+        /// <summary>
+        /// Default Constructor for Controller
+        /// </summary>
+        public Controller()
+        {
+
+        }
 
         /// <summary>
         /// Public Constructor for Controller
@@ -41,9 +49,9 @@ namespace Alarm501
         /// <param name="lineNumber">int lineNumber is line number that will be changed in the text file</param>
         public void LineChanger(string newText, int lineNumber)
         {
-            string[] arrLine = File.ReadAllLines("..\\..\\Alarm.txt");
+            string[] arrLine = File.ReadAllLines("C:/Users/tucke/Desktop/Project 3/Alarm501-Library/Alarm.txt");
             arrLine[lineNumber] = newText;
-            File.WriteAllLines("..\\..\\Alarm.txt", arrLine);
+            File.WriteAllLines("C:/Users/tucke/Desktop/Project 3/Alarm501-Library/Alarm.txt", arrLine);
         }
 
         /// <summary>
@@ -52,9 +60,9 @@ namespace Alarm501
         public void ReadFile()
         {
             BindingList<Alarm> temp = new BindingList<Alarm>();
-            if (File.Exists("..\\..\\Alarm.txt"))
+            if (File.Exists("C:/Users/tucke/Desktop/Project 3/Alarm501-Library/Alarm.txt"))
             {
-                StreamReader reader = new StreamReader("..\\..\\Alarm.txt");
+                StreamReader reader = new StreamReader("C:/Users/tucke/Desktop/Project 3/Alarm501-Library/Alarm.txt");
                 while (!reader.EndOfStream)
                 {
                     string[] timeFromText = reader.ReadLine().Split(':');
@@ -84,7 +92,7 @@ namespace Alarm501
         /// <param name="lineNumber">int lineNumber is the line that it will start reading at</param>
         public void StartReadingAtLine(int lineNumber)
         {
-            using (StreamReader reader = new StreamReader("..\\..\\Alarm.txt"))
+            using (StreamReader reader = new StreamReader("C:/Users/tucke/Desktop/Project 3/Alarm501-Library/Alarm.txt"))
             {
                 for (int i = 0; i < lineNumber - 1; i++)
                 {
@@ -117,7 +125,7 @@ namespace Alarm501
         /// <returns>Return the number of line</returns>
         public int CountLine()
         {
-            using (StreamReader reader = new StreamReader("..\\..\\Alarm.txt"))
+            using (StreamReader reader = new StreamReader("C:/Users/tucke/Desktop/Project 3/Alarm501-Library/Alarm.txt"))
             {
                 int count = 0;
                 while (reader.ReadLine() != null) count++;
@@ -197,13 +205,12 @@ namespace Alarm501
         /// </summary>
         public void AddButtonClickLogic(string finalString)
         {
-            if (File.Exists("..\\..\\Alarm.txt"))
+            if (File.Exists("C:/Users/tucke/Desktop/Project 3/Alarm501-Library/Alarm.txt"))
             {
-                using (StreamWriter writer = new StreamWriter("..\\..\\Alarm.txt", true))
+                using (StreamWriter writer = new StreamWriter("C:/Users/tucke/Desktop/Project 3/Alarm501-Library/Alarm.txt", true))
                 {
                     writer.WriteLine(finalString);
                 }
-
             }
         }
 
@@ -226,5 +233,91 @@ namespace Alarm501
             newTimer.Start();
         }
         */
+
+        public void AddAlarmConsole()
+        {
+            int hour, minute, second, soundChoice = 0;
+            string amPm, onOff, running;
+            bool onOffBool = false;
+            Sound sound = Sound.Reflection;
+            string finalString;
+
+            Console.WriteLine("Enter Hour (1-12): ");
+            hour = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter Minute(1-60): ");
+            minute = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter Seconds(1-60): ");
+            second = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter am or pm: ");
+            amPm = Console.ReadLine();
+            Console.WriteLine("On or Off");
+            onOff = Console.ReadLine();
+            if(onOff.ToLower().Equals("on")) { onOffBool = true; running = "Running"; }
+            else { onOffBool = false; running = "No"; }
+            Console.WriteLine("Choose your sound: 1) Radar 2) Beacon 3) Chimes 4) Circuit 5) Reflection ");
+            soundChoice = Convert.ToInt32(Console.ReadLine());
+            if (soundChoice == 1) { sound = Sound.Radar; }
+            else if (soundChoice == 2) { sound = Sound.Beacon; }
+            else if (soundChoice == 3) { sound = Sound.Chimes; }
+            else if (soundChoice == 4) { sound = Sound.Circuit; }
+            else { sound = Sound.Reflection; }
+            //Console.WriteLine($"{hour} {minute} {second} {amPm} {onOff} {onOffBool} {sound}");
+            finalString = $"{hour}:{minute}:{second}:{running}:{amPm}:{sound}";
+            AddButtonClickLogic(finalString);
+            Alarm alarm = new Alarm(hour, minute, second, onOffBool, amPm, sound);
+            alarmTime.Add(alarm);
+
+
+        }
+        public void EditAlarmConsole()
+        {
+            int hour, minute, second, soundChoice = 0;
+            string amPm, onOff, running;
+            Sound sound = Sound.Reflection;
+
+            Console.WriteLine("Which alarm number would you like to edit?\n");
+            int count = 1;
+            foreach (Alarm a in this.GetAlarmTime())
+            {
+                Console.WriteLine(count + ".) " + a.ToString());
+                count++;
+            }
+            string alarmIndex = Console.ReadLine().ToLower();
+
+            for (int i = 1; i < this.GetAlarmTime().Count + 1; i++)
+            {
+               
+                if (alarmIndex == i.ToString())
+                {
+                    
+                    //Display that alarm
+                    Console.WriteLine("Alarm Being Edited: \n");
+                    Console.WriteLine(alarmTime[i - 1].ToString() + "\n");
+                    //Run add Functions
+                    Console.WriteLine("Enter Hour (1-12): ");
+                    hour = Convert.ToInt32(Console.ReadLine());
+                    Console.WriteLine("Enter Minute(1-60): ");
+                    minute = Convert.ToInt32(Console.ReadLine());
+                    Console.WriteLine("Enter Seconds(1-60): ");
+                    second = Convert.ToInt32(Console.ReadLine());
+                    Console.WriteLine("Enter am or pm: ");
+                    amPm = Console.ReadLine();
+                    Console.WriteLine("On or Off");
+                    onOff = Console.ReadLine();
+                    if (onOff.ToLower().Equals("on")) { running = "Running"; }
+                    else { running = "No"; }
+                    Console.WriteLine("Choose your sound: 1) Radar 2) Beacon 3) Chimes 4) Circuit 5) Reflection ");
+                    soundChoice = Convert.ToInt32(Console.ReadLine());
+                    if (soundChoice == 1) { sound = Sound.Radar; }
+                    else if (soundChoice == 2) { sound = Sound.Beacon; }
+                    else if (soundChoice == 3) { sound = Sound.Chimes; }
+                    else if (soundChoice == 4) { sound = Sound.Circuit; }
+                    else { sound = Sound.Reflection; }
+                    string finalString = $"{hour}:{minute}:{second}:{running}:{amPm}:{sound}";
+                    EditButtonClickLogic(finalString, i - 1);
+                }
+            }
+        }
+
     }
 }

@@ -9,3 +9,15 @@ C:\Users\yutow\Desktop\Spring 2022\CIS 501\Alarm501P2\Alarm501-Library\obj\Debug
 C:\Users\yutow\Desktop\Spring 2022\CIS 501\Alarm501P2\Alarm501-Library\obj\Debug\net5.0\Alarm501_Library.dll
 C:\Users\yutow\Desktop\Spring 2022\CIS 501\Alarm501P2\Alarm501-Library\obj\Debug\net5.0\ref\Alarm501_Library.dll
 C:\Users\yutow\Desktop\Spring 2022\CIS 501\Alarm501P2\Alarm501-Library\obj\Debug\net5.0\Alarm501_Library.pdb
+C:\Users\tucke\Desktop\Project 3\Alarm501-Library\bin\Debug\net5.0\Alarm501_Library.deps.json
+C:\Users\tucke\Desktop\Project 3\Alarm501-Library\bin\Debug\net5.0\Alarm501_Library.dll
+C:\Users\tucke\Desktop\Project 3\Alarm501-Library\bin\Debug\net5.0\ref\Alarm501_Library.dll
+C:\Users\tucke\Desktop\Project 3\Alarm501-Library\bin\Debug\net5.0\Alarm501_Library.pdb
+C:\Users\tucke\Desktop\Project 3\Alarm501-Library\obj\Debug\net5.0\Alarm501_Library.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\tucke\Desktop\Project 3\Alarm501-Library\obj\Debug\net5.0\Alarm501_Library.AssemblyInfoInputs.cache
+C:\Users\tucke\Desktop\Project 3\Alarm501-Library\obj\Debug\net5.0\Alarm501_Library.AssemblyInfo.cs
+C:\Users\tucke\Desktop\Project 3\Alarm501-Library\obj\Debug\net5.0\Alarm501_Library.csproj.CoreCompileInputs.cache
+C:\Users\tucke\Desktop\Project 3\Alarm501-Library\obj\Debug\net5.0\Alarm501_Library.dll
+C:\Users\tucke\Desktop\Project 3\Alarm501-Library\obj\Debug\net5.0\ref\Alarm501_Library.dll
+C:\Users\tucke\Desktop\Project 3\Alarm501-Library\obj\Debug\net5.0\Alarm501_Library.pdb
+C:\Users\tucke\Desktop\Project 3\Alarm501-Library\obj\Debug\net5.0\Alarm501_Library.csproj.AssemblyReference.cache

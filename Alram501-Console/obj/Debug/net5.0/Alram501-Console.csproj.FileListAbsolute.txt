@@ -36,3 +36,22 @@ C:\Users\yuto808263\Desktop\Alarm501\Alram501-Console\obj\Debug\net5.0\Alram501_
 C:\Users\yuto808263\Desktop\Alarm501\Alram501-Console\obj\Debug\net5.0\ref\Alram501_Console.dll
 C:\Users\yuto808263\Desktop\Alarm501\Alram501-Console\obj\Debug\net5.0\Alram501_Console.pdb
 C:\Users\yuto808263\Desktop\Alarm501\Alram501-Console\obj\Debug\net5.0\Alram501-Console.genruntimeconfig.cache
+C:\Users\tucke\Desktop\Project 3\Alram501-Console\obj\Debug\net5.0\Alram501-Console.csproj.AssemblyReference.cache
+C:\Users\tucke\Desktop\Project 3\Alram501-Console\obj\Debug\net5.0\Alram501-Console.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\tucke\Desktop\Project 3\Alram501-Console\obj\Debug\net5.0\Alram501-Console.AssemblyInfoInputs.cache
+C:\Users\tucke\Desktop\Project 3\Alram501-Console\obj\Debug\net5.0\Alram501-Console.AssemblyInfo.cs
+C:\Users\tucke\Desktop\Project 3\Alram501-Console\obj\Debug\net5.0\Alram501-Console.csproj.CoreCompileInputs.cache
+C:\Users\tucke\Desktop\Project 3\Alram501-Console\obj\Debug\net5.0\Alram501_Console.dll
+C:\Users\tucke\Desktop\Project 3\Alram501-Console\obj\Debug\net5.0\ref\Alram501_Console.dll
+C:\Users\tucke\Desktop\Project 3\Alram501-Console\obj\Debug\net5.0\Alram501_Console.pdb
+C:\Users\tucke\Desktop\Project 3\Alram501-Console\bin\Debug\net5.0\Alram501_Console.exe
+C:\Users\tucke\Desktop\Project 3\Alram501-Console\bin\Debug\net5.0\Alram501_Console.deps.json
+C:\Users\tucke\Desktop\Project 3\Alram501-Console\bin\Debug\net5.0\Alram501_Console.runtimeconfig.json
+C:\Users\tucke\Desktop\Project 3\Alram501-Console\bin\Debug\net5.0\Alram501_Console.runtimeconfig.dev.json
+C:\Users\tucke\Desktop\Project 3\Alram501-Console\bin\Debug\net5.0\Alram501_Console.dll
+C:\Users\tucke\Desktop\Project 3\Alram501-Console\bin\Debug\net5.0\ref\Alram501_Console.dll
+C:\Users\tucke\Desktop\Project 3\Alram501-Console\bin\Debug\net5.0\Alram501_Console.pdb
+C:\Users\tucke\Desktop\Project 3\Alram501-Console\bin\Debug\net5.0\Alarm501_Library.dll
+C:\Users\tucke\Desktop\Project 3\Alram501-Console\bin\Debug\net5.0\Alarm501_Library.pdb
+C:\Users\tucke\Desktop\Project 3\Alram501-Console\obj\Debug\net5.0\Alram501-Console.csproj.CopyComplete
+C:\Users\tucke\Desktop\Project 3\Alram501-Console\obj\Debug\net5.0\Alram501-Console.genruntimeconfig.cache

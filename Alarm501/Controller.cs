@@ -42,9 +42,9 @@ namespace Alarm501
         /// <param name="lineNumber">int lineNumber is line number that will be changed in the text file</param>
         public void LineChanger(string newText, int lineNumber)
         {
-            string[] arrLine = File.ReadAllLines("..\\..\\Alarm.txt");
+            string[] arrLine = File.ReadAllLines("C:/Users/tucke/Desktop/Project 3/Alarm501-Library/Alarm.txt");
             arrLine[lineNumber] = newText;
-            File.WriteAllLines("..\\..\\Alarm.txt", arrLine);
+            File.WriteAllLines("C:/Users/tucke/Desktop/Project 3/Alarm501-Library/Alarm.txt", arrLine);
         }
 
         /// <summary>
@@ -53,9 +53,9 @@ namespace Alarm501
         public void ReadFile()
         {
             BindingList<Alarm> temp = new BindingList<Alarm>();
-            if (File.Exists("..\\..\\Alarm.txt"))
+            if (File.Exists("C:/Users/tucke/Desktop/Project 3/Alarm501-Library/Alarm.txt"))
             {
-                StreamReader reader = new StreamReader("..\\..\\Alarm.txt");
+                StreamReader reader = new StreamReader("C:/Users/tucke/Desktop/Project 3/Alarm501-Library/Alarm.txt");
                 while (!reader.EndOfStream)
                 {
                     string[] timeFromText = reader.ReadLine().Split(':');
@@ -85,7 +85,7 @@ namespace Alarm501
         /// <param name="lineNumber">int lineNumber is the line that it will start reading at</param>
         public void StartReadingAtLine(int lineNumber)
         {
-            using (StreamReader reader = new StreamReader("..\\..\\Alarm.txt"))
+            using (StreamReader reader = new StreamReader("C:/Users/tucke/Desktop/Project 3/Alarm501-Library/Alarm.txt"))
             {
                 for (int i = 0; i < lineNumber - 1; i++)
                 {
@@ -118,7 +118,7 @@ namespace Alarm501
         /// <returns>Return the number of line</returns>
         public int CountLine()
         {
-            using (StreamReader reader = new StreamReader("..\\..\\Alarm.txt"))
+            using (StreamReader reader = new StreamReader("C:/Users/tucke/Desktop/Project 3/Alarm501-Library/Alarm.txt"))
             {
                 int count = 0;
                 while (reader.ReadLine() != null) count++;
@@ -198,9 +198,9 @@ namespace Alarm501
         /// </summary>
         public void AddButtonClickLogic(string finalString)
         {
-            if (File.Exists("..\\..\\Alarm.txt"))
+            if (File.Exists("C:/Users/tucke/Desktop/Project 3/Alarm501-Library/Alarm.txt"))
             {
-                using (StreamWriter writer = new StreamWriter("..\\..\\Alarm.txt", true))
+                using (StreamWriter writer = new StreamWriter("C:/Users/tucke/Desktop/Project 3/Alarm501-Library/Alarm.txt", true))
                 {
                     writer.WriteLine(finalString);
                 }
