@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net5.0": {}
+    "net5.0": {
+      "Alarm501_Library/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/Alarm501_Library.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Alarm501_Library.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "Alarm501_Library/1.0.0": {
+      "type": "project",
+      "path": "../Alarm501-Library/Alarm501_Library.csproj",
+      "msbuildProject": "../Alarm501-Library/Alarm501_Library.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net5.0": []
+    "net5.0": [
+      "Alarm501_Library >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\yutow\\.nuget\\packages\\": {}
@@ -33,7 +52,11 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\yutow\\Desktop\\Spring 2022\\CIS 501\\Alarm501Project3\\Alarm501\\Alarm501-Library\\Alarm501_Library.csproj": {
+              "projectPath": "C:\\Users\\yutow\\Desktop\\Spring 2022\\CIS 501\\Alarm501Project3\\Alarm501\\Alarm501-Library\\Alarm501_Library.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -63,5 +86,13 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.406\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\Users\\yutow\\Desktop\\Spring 2022\\CIS 501\\Alarm501Project3\\Alarm501\\Alram501-Console\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

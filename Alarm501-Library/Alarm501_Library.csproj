@@ -6,4 +6,12 @@
     <AssemblyName>Alarm501_Library</AssemblyName>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="Alarm.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Alarm.txt" />
+  </ItemGroup>
+
 </Project>

@@ -3,9 +3,10 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31729.503
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alarm501", "Alarm501\Alarm501.csproj", "{BEB6879D-C5D4-493C-B24A-A98DDFD5E412}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Alram501-Console", "Alram501-Console\Alram501-Console.csproj", "{7E5FD9C4-4C22-4E45-9BE8-8A5F2FD066E6}"
+	ProjectSection(ProjectDependencies) = postProject
+		{1691E93C-4BE6-4807-85E7-C240084BD1A0} = {1691E93C-4BE6-4807-85E7-C240084BD1A0}
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Alarm501_Library", "Alarm501-Library\Alarm501_Library.csproj", "{1691E93C-4BE6-4807-85E7-C240084BD1A0}"
 EndProject
@@ -20,10 +21,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{BEB6879D-C5D4-493C-B24A-A98DDFD5E412}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BEB6879D-C5D4-493C-B24A-A98DDFD5E412}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BEB6879D-C5D4-493C-B24A-A98DDFD5E412}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BEB6879D-C5D4-493C-B24A-A98DDFD5E412}.Release|Any CPU.Build.0 = Release|Any CPU
 		{7E5FD9C4-4C22-4E45-9BE8-8A5F2FD066E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{7E5FD9C4-4C22-4E45-9BE8-8A5F2FD066E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7E5FD9C4-4C22-4E45-9BE8-8A5F2FD066E6}.Release|Any CPU.ActiveCfg = Release|Any CPU

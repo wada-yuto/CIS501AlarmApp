@@ -10,4 +10,10 @@
     <ProjectReference Include="..\Alarm501-Library\Alarm501_Library.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Reference Include="Alarm501_Library">
+      <HintPath>..\..\..\Alarm501P2\Alarm501-Library\obj\Debug\net5.0\Alarm501_Library.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>

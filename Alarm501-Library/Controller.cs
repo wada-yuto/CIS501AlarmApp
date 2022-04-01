@@ -19,10 +19,18 @@ namespace Alarm501
 
         private Timers.Timer newTimer = null;
         //List to store alarm time
-        private BindingList<Alarm> alarmTime = new BindingList<Alarm>();
+        public BindingList<Alarm> alarmTime = new BindingList<Alarm>();
 
         private AlarmOffDel AlarmOffDelegate;
         private GetSnoozeTimeDel GetSnoozeTimeDelegate;
+
+        /// <summary>
+        /// Default Constructor for Controller
+        /// </summary>
+        public Controller()
+        {
+
+        }
 
         /// <summary>
         /// Public Constructor for Controller
@@ -203,7 +211,6 @@ namespace Alarm501
                 {
                     writer.WriteLine(finalString);
                 }
-
             }
         }
 
@@ -226,5 +233,91 @@ namespace Alarm501
             newTimer.Start();
         }
         */
+
+        public void AddAlarmConsole()
+        {
+            int hour, minute, second, soundChoice = 0;
+            string amPm, onOff, running;
+            bool onOffBool = false;
+            Sound sound = Sound.Reflection;
+            string finalString;
+
+            Console.WriteLine("Enter Hour (1-12): ");
+            hour = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter Minute(1-60): ");
+            minute = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter Seconds(1-60): ");
+            second = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter am or pm: ");
+            amPm = Console.ReadLine();
+            Console.WriteLine("On or Off");
+            onOff = Console.ReadLine();
+            if(onOff.ToLower().Equals("on")) { onOffBool = true; running = "Running"; }
+            else { onOffBool = false; running = "No"; }
+            Console.WriteLine("Choose your sound: 1) Radar 2) Beacon 3) Chimes 4) Circuit 5) Reflection ");
+            soundChoice = Convert.ToInt32(Console.ReadLine());
+            if (soundChoice == 1) { sound = Sound.Radar; }
+            else if (soundChoice == 2) { sound = Sound.Beacon; }
+            else if (soundChoice == 3) { sound = Sound.Chimes; }
+            else if (soundChoice == 4) { sound = Sound.Circuit; }
+            else { sound = Sound.Reflection; }
+            //Console.WriteLine($"{hour} {minute} {second} {amPm} {onOff} {onOffBool} {sound}");
+            finalString = $"{hour}:{minute}:{second}:{running}:{amPm}:{sound}";
+            AddButtonClickLogic(finalString);
+            Alarm alarm = new Alarm(hour, minute, second, onOffBool, amPm, sound);
+            alarmTime.Add(alarm);
+
+
+        }
+        public void EditAlarmConsole()
+        {
+            int hour, minute, second, soundChoice = 0;
+            string amPm, onOff, running;
+            Sound sound = Sound.Reflection;
+
+            Console.WriteLine("Which alarm number would you like to edit?\n");
+            int count = 1;
+            foreach (Alarm a in this.GetAlarmTime())
+            {
+                Console.WriteLine(count + ".) " + a.ToString());
+                count++;
+            }
+            string alarmIndex = Console.ReadLine().ToLower();
+
+            for (int i = 1; i < this.GetAlarmTime().Count + 1; i++)
+            {
+               
+                if (alarmIndex == i.ToString())
+                {
+                    
+                    //Display that alarm
+                    Console.WriteLine("Alarm Being Edited: \n");
+                    Console.WriteLine(alarmTime[i - 1].ToString() + "\n");
+                    //Run add Functions
+                    Console.WriteLine("Enter Hour (1-12): ");
+                    hour = Convert.ToInt32(Console.ReadLine());
+                    Console.WriteLine("Enter Minute(1-60): ");
+                    minute = Convert.ToInt32(Console.ReadLine());
+                    Console.WriteLine("Enter Seconds(1-60): ");
+                    second = Convert.ToInt32(Console.ReadLine());
+                    Console.WriteLine("Enter am or pm: ");
+                    amPm = Console.ReadLine();
+                    Console.WriteLine("On or Off");
+                    onOff = Console.ReadLine();
+                    if (onOff.ToLower().Equals("on")) { running = "Running"; }
+                    else { running = "No"; }
+                    Console.WriteLine("Choose your sound: 1) Radar 2) Beacon 3) Chimes 4) Circuit 5) Reflection ");
+                    soundChoice = Convert.ToInt32(Console.ReadLine());
+                    if (soundChoice == 1) { sound = Sound.Radar; }
+                    else if (soundChoice == 2) { sound = Sound.Beacon; }
+                    else if (soundChoice == 3) { sound = Sound.Chimes; }
+                    else if (soundChoice == 4) { sound = Sound.Circuit; }
+                    else { sound = Sound.Reflection; }
+                    string finalString = $"{hour}:{minute}:{second}:{running}:{amPm}:{sound}";
+                    EditButtonClickLogic(finalString, i - 1);
+                }
+            }
+        }
+
     }
 }

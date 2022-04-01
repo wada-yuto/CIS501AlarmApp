@@ -12,6 +12,7 @@ using System.IO;
 using System.Timers;
 using Alarm501;
 
+
 namespace Alarm501_GUI
 {
     public delegate void ReadFileDel();

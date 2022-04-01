@@ -1,4 +1,0 @@
-3:37:00:Running:PM:Beacon
-1:55:00:Running:PM:Beacon
-2:17:33:Running:PM:Circuit
-4:30:00:Running:PM:Circuit
