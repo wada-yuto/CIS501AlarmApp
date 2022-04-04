@@ -90,11 +90,17 @@ namespace Alarm501_GUI
             if (uxAlarmList.SelectedItem != null) uxEditButton.Enabled = true;
         }
 
+        /// <summary>
+        /// Used to set the text
+        /// </summary>
         private void SetText()
         {
             var threadParameters = new System.Threading.ThreadStart(delegate { AlarmOff(Sound.Beacon); });
+            var threadParameters2 = new System.Threading.ThreadStart(delegate { AlarmOff(Sound.Beacon); });
             var thread2 = new System.Threading.Thread(threadParameters);
+            var thread3 = new System.Threading.Thread(threadParameters2);
             thread2.Start();
+            thread3.Start();
         }
 
         /// <summary>
@@ -103,17 +109,19 @@ namespace Alarm501_GUI
         public void AlarmOff(Sound sound)
         {
 
-            if (uxAlarmOffTextBox.InvokeRequired)
+            if (uxAlarmOffTextBox.InvokeRequired && uxSoundLabel.InvokeRequired)
             {
                 Action safeWrite = delegate { AlarmOff(Sound.Beacon); };
+                Action safeWrite2 = delegate { AlarmOff(Sound.Beacon); };
                 uxAlarmOffTextBox.Invoke(safeWrite);
+                uxSoundLabel.Invoke(safeWrite2);
             }
             else
             {
                 uxAlarmOffTextBox.Text = "Alarm is going off";
+                uxSoundLabel.Text = sound.ToString();
             }
 
-            uxSoundLabel.Text = sound.ToString();
             uxSnoozeButton.Enabled = true;
             uxStopButton.Enabled = true;            
             uxSnoozeTimeUpDown.Enabled = true;
