@@ -25,7 +25,7 @@ namespace Alram501_Console
                     Console.WriteLine($"{countnumberinfile}) {a.ToString()}");
                     countnumberinfile++;
                 }
-                Console.WriteLine("Add (a), Edit(e), Snooze(z), Stop(s), Quit(q)");
+                Console.WriteLine("Add(a), Edit(e), Snooze(z), Stop(s), Quit(q)");
                 option = Console.ReadLine().ToLower();
                 
                 
