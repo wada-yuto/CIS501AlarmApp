@@ -235,6 +235,9 @@ namespace Alarm501
         }
         */
 
+        /// <summary>
+        /// Adds an alarm from the console application
+        /// </summary>
         public void AddAlarmConsole()
         {
             int hour, minute, second, soundChoice = 0;
@@ -270,6 +273,10 @@ namespace Alarm501
 
 
         }
+
+        /// <summary>
+        /// edits an alarm in the console application
+        /// </summary>
         public void EditAlarmConsole()
         {
             int hour, minute, second, soundChoice = 0;

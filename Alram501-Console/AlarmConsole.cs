@@ -54,7 +54,7 @@ namespace Alram501_Console
                 }
             }
         }
-
+       
         public static void AlarmSoundOff(Sound sound)
         {
             Console.WriteLine("-------------------------------");
