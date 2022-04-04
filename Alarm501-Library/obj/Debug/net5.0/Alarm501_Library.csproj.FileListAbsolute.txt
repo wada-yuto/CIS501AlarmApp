@@ -33,3 +33,15 @@ C:\Users\yutow\Desktop\Alarm501\Alarm501\Alarm501-Library\obj\Debug\net5.0\Alarm
 C:\Users\yutow\Desktop\Alarm501\Alarm501\Alarm501-Library\obj\Debug\net5.0\Alarm501_Library.dll
 C:\Users\yutow\Desktop\Alarm501\Alarm501\Alarm501-Library\obj\Debug\net5.0\ref\Alarm501_Library.dll
 C:\Users\yutow\Desktop\Alarm501\Alarm501\Alarm501-Library\obj\Debug\net5.0\Alarm501_Library.pdb
+C:\Users\tucke\Desktop\Project_3\Alarm501-Library\bin\Debug\net5.0\Alarm501_Library.deps.json
+C:\Users\tucke\Desktop\Project_3\Alarm501-Library\bin\Debug\net5.0\Alarm501_Library.dll
+C:\Users\tucke\Desktop\Project_3\Alarm501-Library\bin\Debug\net5.0\ref\Alarm501_Library.dll
+C:\Users\tucke\Desktop\Project_3\Alarm501-Library\bin\Debug\net5.0\Alarm501_Library.pdb
+C:\Users\tucke\Desktop\Project_3\Alarm501-Library\obj\Debug\net5.0\Alarm501_Library.csproj.AssemblyReference.cache
+C:\Users\tucke\Desktop\Project_3\Alarm501-Library\obj\Debug\net5.0\Alarm501_Library.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\tucke\Desktop\Project_3\Alarm501-Library\obj\Debug\net5.0\Alarm501_Library.AssemblyInfoInputs.cache
+C:\Users\tucke\Desktop\Project_3\Alarm501-Library\obj\Debug\net5.0\Alarm501_Library.AssemblyInfo.cs
+C:\Users\tucke\Desktop\Project_3\Alarm501-Library\obj\Debug\net5.0\Alarm501_Library.csproj.CoreCompileInputs.cache
+C:\Users\tucke\Desktop\Project_3\Alarm501-Library\obj\Debug\net5.0\Alarm501_Library.dll
+C:\Users\tucke\Desktop\Project_3\Alarm501-Library\obj\Debug\net5.0\ref\Alarm501_Library.dll
+C:\Users\tucke\Desktop\Project_3\Alarm501-Library\obj\Debug\net5.0\Alarm501_Library.pdb

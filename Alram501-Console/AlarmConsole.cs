@@ -13,7 +13,7 @@ namespace Alram501_Console
        
         public static void Main(string[] args)
         {
-            Controller c = new Controller(AlarmSoundOff);
+            Controller c = new Controller(AlarmSoundOff, GetSnoozeTime);
             string option;
             bool setting = true;
             while (setting)
@@ -25,14 +25,10 @@ namespace Alram501_Console
                     Console.WriteLine($"{countnumberinfile}) {a.ToString()}");
                     countnumberinfile++;
                 }
-                Console.WriteLine("Add (a), Edit(e), Stop(s), Snooze(s), Quit(q)");
+                Console.WriteLine("Add (a), Edit(e), Snooze(z), Stop(s),z Quit(q)");
                 option = Console.ReadLine().ToLower();
                 
-                //List out all the alarm in the text file.
-                //Ask user what they want to do with the alarm.
-                //Options are Add, Edit, Stop, and Snooze.
-                //If (add)
-                //If (edit)
+                
                 if(option == "a")
                 {
                     c.AddAlarmConsole();
@@ -43,9 +39,13 @@ namespace Alram501_Console
                     c.EditAlarmConsole();
                     Console.WriteLine("Edit");
                 }
-                if (option == "s")
+                if(option == "z")
                 {
-                    Console.WriteLine("Snooze");
+                    c.SnoozeButtonClickLogic();
+                }
+                if(option == "s")
+                { 
+                    c.StopButtonClickLogic(); 
                 }
                 if(option == "q")
                 {
@@ -57,7 +57,17 @@ namespace Alram501_Console
 
         public static void AlarmSoundOff(Sound sound)
         {
+            Console.WriteLine("-------------------------------");
             Console.WriteLine("Alarm is going off: " + sound);
+            Console.WriteLine("-------------------------------");
+        }
+
+        public static int GetSnoozeTime()
+        {
+            int snooze = 0;
+            Console.WriteLine("How long do you wanna snooze for?");
+            snooze = Convert.ToInt32(Console.ReadLine());
+            return snooze;
         }
     }
 }

@@ -24,17 +24,7 @@ namespace Alarm501
         private AlarmOffDel AlarmOffDelegate;
         private GetSnoozeTimeDel GetSnoozeTimeDelegate;
 
-        /// <summary>
-        /// Default Constructor for Controller
-        /// </summary>
-        public Controller(AlarmOffDel alarmOffDelegate)
-        {
-            this.AlarmOffDelegate = alarmOffDelegate;
-            newTimer.Elapsed += ElapsedEvent;
-            newTimer.AutoReset = true;
-            newTimer.Start();
-        }
-
+       
         /// <summary>
         /// Public Constructor for Controller
         /// </summary>
