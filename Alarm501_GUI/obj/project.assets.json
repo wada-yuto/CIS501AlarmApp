@@ -27,19 +27,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\yuto808263\\.nuget\\packages\\": {}
+    "C:\\Users\\yutow\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\yuto808263\\Desktop\\Alarm501Project3\\Alarm501\\Alarm501_GUI\\Alarm501_GUI.csproj",
+      "projectUniqueName": "C:\\Users\\yutow\\Desktop\\Alarm501\\Alarm501\\Alarm501_GUI\\Alarm501_GUI.csproj",
       "projectName": "Alarm501_GUI",
-      "projectPath": "C:\\Users\\yuto808263\\Desktop\\Alarm501Project3\\Alarm501\\Alarm501_GUI\\Alarm501_GUI.csproj",
-      "packagesPath": "C:\\Users\\yuto808263\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\yuto808263\\Desktop\\Alarm501Project3\\Alarm501\\Alarm501_GUI\\obj\\",
+      "projectPath": "C:\\Users\\yutow\\Desktop\\Alarm501\\Alarm501\\Alarm501_GUI\\Alarm501_GUI.csproj",
+      "packagesPath": "C:\\Users\\yutow\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\yutow\\Desktop\\Alarm501\\Alarm501\\Alarm501_GUI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\yuto808263\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\yutow\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -53,8 +53,8 @@
         "net5.0-windows7.0": {
           "targetAlias": "net5.0-windows",
           "projectReferences": {
-            "C:\\Users\\yuto808263\\Desktop\\Alarm501Project3\\Alarm501\\Alarm501-Library\\Alarm501_Library.csproj": {
-              "projectPath": "C:\\Users\\yuto808263\\Desktop\\Alarm501Project3\\Alarm501\\Alarm501-Library\\Alarm501_Library.csproj"
+            "C:\\Users\\yutow\\Desktop\\Alarm501\\Alarm501\\Alarm501-Library\\Alarm501_Library.csproj": {
+              "projectPath": "C:\\Users\\yutow\\Desktop\\Alarm501\\Alarm501\\Alarm501-Library\\Alarm501_Library.csproj"
             }
           }
         }

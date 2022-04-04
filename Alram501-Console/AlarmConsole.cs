@@ -9,9 +9,11 @@ namespace Alram501_Console
     public class AlarmConsole
     {
 
-        static void Main(string[] args)
+
+       
+        public static void Main(string[] args)
         {
-            Controller c = new();
+            Controller c = new Controller(AlarmSoundOff);
             string option;
             bool setting = true;
             while (setting)
@@ -51,6 +53,11 @@ namespace Alram501_Console
                     setting = false;
                 }
             }
+        }
+
+        public static void AlarmSoundOff(Sound sound)
+        {
+            Console.WriteLine("Alarm is going off: " + sound);
         }
     }
 }

@@ -27,8 +27,9 @@ namespace Alarm501
         /// <summary>
         /// Default Constructor for Controller
         /// </summary>
-        public Controller()
+        public Controller(AlarmOffDel alarmOffDelegate)
         {
+            this.AlarmOffDelegate = alarmOffDelegate;
             newTimer.Elapsed += ElapsedEvent;
             newTimer.AutoReset = true;
             newTimer.Start();
@@ -157,12 +158,12 @@ namespace Alarm501
                 DateTime alarmTime = alarm.GetTime();
                 if (currentTime.Hour == alarmTime.Hour && currentTime.Minute == alarmTime.Minute && currentTime.Second == alarmTime.Second)
                 {
-                    AlarmOffDelegate(alarm.sound);
+                    //AlarmOffDelegate(alarm.sound);
                     alarm.Ringing = true;
                 }
                 if (alarm.Ringing)
                 {
-                    if (currentTime.Hour == alarm.SnoozeTime.Hour && currentTime.Minute == alarm.SnoozeTime.Minute)
+                    if (currentTime.Hour == alarm.SnoozeTime.Hour && currentTime.Minute == alarm.SnoozeTime.Minute && currentTime.Second == alarmTime.Second)
                     {
                         AlarmOffDelegate(alarm.sound);
                     }
