@@ -8,8 +8,6 @@ namespace Alram501_Console
 {
     public class AlarmConsole
     {
-
-
        
         public static void Main(string[] args)
         {

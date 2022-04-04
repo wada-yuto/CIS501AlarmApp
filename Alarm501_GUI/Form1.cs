@@ -217,6 +217,8 @@ namespace Alarm501_GUI
             */
 
             if (uxAlarmList.SelectedItem != null) uxEditButton.Enabled = true;
+
+
         }
     }
 }
